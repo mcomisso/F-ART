@@ -1,0 +1,30 @@
+PODS:
+  - ChameleonFramework (1.1.1)
+  - LLARingSpinnerView (0.1.2)
+  - NGAParallaxMotion (1.0.2)
+  - pop (1.0.6)
+  - SDWebImage (3.7.0):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.7.0)
+  - UIColor+FlatColors (0.0.2)
+  - UIImage+BlurredFrame (0.0.4)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - LLARingSpinnerView
+  - NGAParallaxMotion (~> 1.0)
+  - pop (~> 1.0)
+  - SDWebImage (~> 3.6)
+  - UIColor+FlatColors
+  - UIImage+BlurredFrame
+
+SPEC CHECKSUMS:
+  ChameleonFramework: c60096686e3771f5d78f26cfbfd08955a8a88cbd
+  LLARingSpinnerView: b9ee4453c976bc8edca6cc41a4d7e41280f85fc6
+  NGAParallaxMotion: f25d6b7e4eefe1c94211dbf402cd3563e56d46f3
+  pop: e518794da38942c05255eb64b36d894e70cb4f00
+  SDWebImage: 791cb0f588046cb0bb7802ae8ae8f5462947b773
+  UIColor+FlatColors: 15506ef6472e26a751033f2f2469283800bcb906
+  UIImage+BlurredFrame: 0c38f5760d72125c47d16001a88faaac573bd35d
+
+COCOAPODS: 0.34.4

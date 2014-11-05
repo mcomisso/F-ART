@@ -1,0 +1,9 @@
+# Not important files #
+parseData.plist
+.DS_Store
+.Spotlight-V100
+
+# Frameworks not included #
+FacebookSDK.framework
+Parse.framework
+Pods

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D4FE4D09-7629-4566-BC92-577D5DA3AF57</string>
+	<key>IDESourceControlProjectName</key>
+	<string>H-ound</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>42EBD0EBFDE901F268BC044C8B34FB6C39081534</key>
+		<string>https://github.com/mcomisso/H-ound.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>H-ound.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>42EBD0EBFDE901F268BC044C8B34FB6C39081534</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mcomisso/H-ound.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>42EBD0EBFDE901F268BC044C8B34FB6C39081534</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>42EBD0EBFDE901F268BC044C8B34FB6C39081534</string>
+			<key>IDESourceControlWCCName</key>
+			<string>H-ound</string>
+		</dict>
+	</array>
+</dict>
+</plist>
