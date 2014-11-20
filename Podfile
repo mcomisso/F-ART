@@ -5,6 +5,7 @@ pod 'UIImage+BlurredFrame'
 pod 'pop', '~> 1.0'
 pod 'NGAParallaxMotion', '~> 1.0'
 pod 'UIColor+FlatColors'
+pod 'CWStatusBarNotification', '~> 2.2.2'
 
 #Colors
 pod 'ChameleonFramework'

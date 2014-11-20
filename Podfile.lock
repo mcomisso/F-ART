@@ -1,5 +1,6 @@
 PODS:
   - ChameleonFramework (1.1.1)
+  - CWStatusBarNotification (2.2.2)
   - LLARingSpinnerView (0.1.2)
   - NGAParallaxMotion (1.0.2)
   - pop (1.0.6)
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework
+  - CWStatusBarNotification (~> 2.2.2)
   - LLARingSpinnerView
   - NGAParallaxMotion (~> 1.0)
   - pop (~> 1.0)
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ChameleonFramework: c60096686e3771f5d78f26cfbfd08955a8a88cbd
+  CWStatusBarNotification: 7e43716355830c26124eae9b91c4434dfa2a6a73
   LLARingSpinnerView: b9ee4453c976bc8edca6cc41a4d7e41280f85fc6
   NGAParallaxMotion: f25d6b7e4eefe1c94211dbf402cd3563e56d46f3
   pop: e518794da38942c05255eb64b36d894e70cb4f00
