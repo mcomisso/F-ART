@@ -9,8 +9,13 @@
 #import "PushNotificationMaster.h"
 #import "CWStatusBarNotification.h"
 
-@implementation PushNotificationMaster
+@interface PushNotificationMaster()
 
+@property (nonatomic, strong) NSArray *fartMessage;
+
+@end
+
+@implementation PushNotificationMaster
 
 -(void)sendPushNotificationToUserChannel:(NSString *)userChannel
 {
@@ -41,6 +46,16 @@
         }
     }];
 
+}
+
+-(void)sendPushNotificationViaCloudCode:(NSString *)userTarget
+{
+    [PFCloud callFunctionInBackground:@"sendPushToUser" withParameters:@{@"recipiendId":userTarget, @"message": @"💨"} block:^(id object, NSError *error) {
+        if (!error) {
+            //Push was successfully sent
+//            CWStatusBarNotification *statusBarNotification = [CWStatusBarNotification new];
+        }
+    }];
 }
 
 @end

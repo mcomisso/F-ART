@@ -104,6 +104,7 @@
 		B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationMaster.m; sourceTree = "<group>"; };
 		B96ADA8E1A1D74DF00E4E424 /* shareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shareTableViewCell.h; sourceTree = "<group>"; };
 		B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shareTableViewCell.m; sourceTree = "<group>"; };
+		B96ADA921A1E0E5100E4E424 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		B990A19C197DBB1600B276E9 /* feedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackViewController.h; sourceTree = "<group>"; };
 		B990A19D197DBB1600B276E9 /* feedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackViewController.m; sourceTree = "<group>"; };
 		B9B2F537196FEA2E00FC857D /* parseData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parseData.plist; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 		B917D28B196E0CDD008E418D /* H-ound */ = {
 			isa = PBXGroup;
 			children = (
+				B96ADA921A1E0E5100E4E424 /* Constants.h */,
 				B917D294196E0CDD008E418D /* AppDelegate.h */,
 				B917D295196E0CDD008E418D /* AppDelegate.m */,
 				B96ADA8B1A1D579A00E4E424 /* PushNotificationMaster.h */,
@@ -491,7 +493,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "9FC1316E-BA2D-47FE-B17D-D3087B3467A1";
+				PROVISIONING_PROFILE = "4c48fc25-40eb-429c-8648-4126f276a530";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -524,7 +526,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "9FC1316E-BA2D-47FE-B17D-D3087B3467A1";
+				PROVISIONING_PROFILE = "4c48fc25-40eb-429c-8648-4126f276a530";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
