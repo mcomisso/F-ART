@@ -10,6 +10,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <UIImage+BlurredFrame/UIImage+BlurredFrame.h>
 
+#import "ViewController.h"
+
 #import <NGAParallaxMotion/NGAParallaxMotion.h>
 
 @interface userSettingsViewController ()
@@ -83,6 +85,18 @@
          }
      }];
     
+}
+
+- (IBAction)logout:(id)sender {
+    [PFUser logOut];
+    
+    UIStoryboard *storyboard = [self storyboard];
+    ViewController *loginViewController =
+    [storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+    
+    [self presentViewController:loginViewController
+                       animated:YES
+                     completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
