@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>H-ound Fart Ed. Watch App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>H-ound Fart Ed..xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>B917D2A2196E0CDD008E418D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B967B3911A1BDCCB005BEBF8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B967B3A51A1BDCCB005BEBF8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

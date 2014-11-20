@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B45A25CDC583482799DADC2C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14F84AC36DF49ADAA85E773 /* libPods.a */; };
+		B907E0311A140E10009713F5 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E02F1A140E10009713F5 /* Crashlytics.framework */; };
+		B907E0321A140E10009713F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E0301A140E10009713F5 /* Fabric.framework */; };
+		B907E0351A140EAA009713F5 /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E0331A140EAA009713F5 /* MoPub.framework */; };
+		B907E0361A140EAA009713F5 /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B907E0341A140EAA009713F5 /* MoPub.bundle */; };
 		B917D286196E0CDD008E418D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D285196E0CDD008E418D /* Foundation.framework */; };
 		B917D288196E0CDD008E418D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D287196E0CDD008E418D /* CoreGraphics.framework */; };
 		B917D28A196E0CDD008E418D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D289196E0CDD008E418D /* UIKit.framework */; };
@@ -33,12 +37,31 @@
 		B917D2DC196E7D43008E418D /* contactCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B917D2DB196E7D43008E418D /* contactCellTableViewCell.m */; };
 		B917D2E1196EE1D6008E418D /* userSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B917D2E0196EE1D6008E418D /* userSettingsViewController.m */; };
 		B954ADCD1978946700AB9877 /* contactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B954ADCC1978946700AB9877 /* contactsViewController.m */; };
+		B96ADA8D1A1D579A00E4E424 /* PushNotificationMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */; };
+		B96ADA901A1D74DF00E4E424 /* shareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */; };
 		B990A19E197DBB1600B276E9 /* feedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B990A19D197DBB1600B276E9 /* feedbackViewController.m */; };
 		B9B2F538196FEA2E00FC857D /* parseData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9B2F537196FEA2E00FC857D /* parseData.plist */; };
 		B9DCAB031A099C13000940C7 /* fart.caf in Resources */ = {isa = PBXBuildFile; fileRef = B9DCAB021A099C13000940C7 /* fart.caf */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B967B3B31A1BDCCB005BEBF8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B907E02F1A140E10009713F5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		B907E0301A140E10009713F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		B907E0331A140EAA009713F5 /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = SOURCE_ROOT; };
+		B907E0341A140EAA009713F5 /* MoPub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoPub.bundle; path = MoPub.framework/Versions/A/Resources/MoPub.bundle; sourceTree = SOURCE_ROOT; };
 		B917D282196E0CDD008E418D /* H-ound Fart Ed..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H-ound Fart Ed..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B917D285196E0CDD008E418D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B917D287196E0CDD008E418D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,6 +99,11 @@
 		B917D2E0196EE1D6008E418D /* userSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingsViewController.m; path = ../userSettingsViewController.m; sourceTree = "<group>"; };
 		B954ADCB1978946700AB9877 /* contactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactsViewController.h; sourceTree = "<group>"; };
 		B954ADCC1978946700AB9877 /* contactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactsViewController.m; sourceTree = "<group>"; };
+		B967B3931A1BDCCB005BEBF8 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		B96ADA8B1A1D579A00E4E424 /* PushNotificationMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotificationMaster.h; sourceTree = "<group>"; };
+		B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationMaster.m; sourceTree = "<group>"; };
+		B96ADA8E1A1D74DF00E4E424 /* shareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shareTableViewCell.h; sourceTree = "<group>"; };
+		B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shareTableViewCell.m; sourceTree = "<group>"; };
 		B990A19C197DBB1600B276E9 /* feedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackViewController.h; sourceTree = "<group>"; };
 		B990A19D197DBB1600B276E9 /* feedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackViewController.m; sourceTree = "<group>"; };
 		B9B2F537196FEA2E00FC857D /* parseData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parseData.plist; sourceTree = "<group>"; };
@@ -93,6 +121,7 @@
 				B917D2D5196E0F5A008E418D /* Social.framework in Frameworks */,
 				B917D2D3196E0F4E008E418D /* Accounts.framework in Frameworks */,
 				B917D2D1196E0F05008E418D /* FacebookSDK.framework in Frameworks */,
+				B907E0321A140E10009713F5 /* Fabric.framework in Frameworks */,
 				B917D2CF196E0E10008E418D /* SystemConfiguration.framework in Frameworks */,
 				B917D2CB196E0DFC008E418D /* Security.framework in Frameworks */,
 				B917D2C9196E0DEF008E418D /* QuartzCore.framework in Frameworks */,
@@ -100,12 +129,14 @@
 				B917D2C5196E0DDC008E418D /* libz.dylib in Frameworks */,
 				B917D2C3196E0DCC008E418D /* CFNetwork.framework in Frameworks */,
 				B917D2C1196E0DC6008E418D /* AudioToolbox.framework in Frameworks */,
+				B907E0311A140E10009713F5 /* Crashlytics.framework in Frameworks */,
 				B917D2BD196E0CF0008E418D /* CoreBluetooth.framework in Frameworks */,
 				B917D2BB196E0CE9008E418D /* CoreLocation.framework in Frameworks */,
 				B917D288196E0CDD008E418D /* CoreGraphics.framework in Frameworks */,
 				B917D28A196E0CDD008E418D /* UIKit.framework in Frameworks */,
 				B917D2BF196E0D91008E418D /* Parse.framework in Frameworks */,
 				B917D286196E0CDD008E418D /* Foundation.framework in Frameworks */,
+				B907E0351A140EAA009713F5 /* MoPub.framework in Frameworks */,
 				B45A25CDC583482799DADC2C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +193,7 @@
 				B917D289196E0CDD008E418D /* UIKit.framework */,
 				B917D2A4196E0CDD008E418D /* XCTest.framework */,
 				F14F84AC36DF49ADAA85E773 /* libPods.a */,
+				B967B3931A1BDCCB005BEBF8 /* WatchKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,9 +201,10 @@
 		B917D28B196E0CDD008E418D /* H-ound */ = {
 			isa = PBXGroup;
 			children = (
-				B9DAA40219772B83006DD781 /* Location Manager */,
 				B917D294196E0CDD008E418D /* AppDelegate.h */,
 				B917D295196E0CDD008E418D /* AppDelegate.m */,
+				B96ADA8B1A1D579A00E4E424 /* PushNotificationMaster.h */,
+				B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */,
 				B917D297196E0CDD008E418D /* Main.storyboard */,
 				B9DCAB021A099C13000940C7 /* fart.caf */,
 				B917D2E2196EE1E2008E418D /* User Settings */,
@@ -189,6 +222,10 @@
 		B917D28C196E0CDD008E418D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B907E0331A140EAA009713F5 /* MoPub.framework */,
+				B907E0341A140EAA009713F5 /* MoPub.bundle */,
+				B907E02F1A140E10009713F5 /* Crashlytics.framework */,
+				B907E0301A140E10009713F5 /* Fabric.framework */,
 				B917D28D196E0CDD008E418D /* H-ound Fart Ed.-Info.plist */,
 				B917D28E196E0CDD008E418D /* InfoPlist.strings */,
 				B917D291196E0CDD008E418D /* main.m */,
@@ -222,6 +259,8 @@
 				B954ADCC1978946700AB9877 /* contactsViewController.m */,
 				B917D2DA196E7D43008E418D /* contactCellTableViewCell.h */,
 				B917D2DB196E7D43008E418D /* contactCellTableViewCell.m */,
+				B96ADA8E1A1D74DF00E4E424 /* shareTableViewCell.h */,
+				B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */,
 			);
 			name = "Contacts View";
 			sourceTree = "<group>";
@@ -244,13 +283,6 @@
 			name = Feedback;
 			sourceTree = "<group>";
 		};
-		B9DAA40219772B83006DD781 /* Location Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Location Manager";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +295,8 @@
 				B917D27F196E0CDD008E418D /* Frameworks */,
 				B917D280196E0CDD008E418D /* Resources */,
 				56B85890C19D4CAB935C2A32 /* Copy Pods Resources */,
+				B907E02E1A140DD7009713F5 /* ShellScript */,
+				B967B3B31A1BDCCB005BEBF8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -321,6 +355,7 @@
 				B917D29E196E0CDD008E418D /* Images.xcassets in Resources */,
 				B917D290196E0CDD008E418D /* InfoPlist.strings in Resources */,
 				B9B2F538196FEA2E00FC857D /* parseData.plist in Resources */,
+				B907E0361A140EAA009713F5 /* MoPub.bundle in Resources */,
 				B9DCAB031A099C13000940C7 /* fart.caf in Resources */,
 				B917D299196E0CDD008E418D /* Main.storyboard in Resources */,
 			);
@@ -359,6 +394,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B907E02E1A140DD7009713F5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run bc6eb673602ede597b84b8042dbc6bdae962e4e2 493ea0cc1777008654e2598d232e6891dc122ecd5ca4635cfa6865f6d310387f";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -372,6 +420,8 @@
 				B954ADCD1978946700AB9877 /* contactsViewController.m in Sources */,
 				B917D296196E0CDD008E418D /* AppDelegate.m in Sources */,
 				B990A19E197DBB1600B276E9 /* feedbackViewController.m in Sources */,
+				B96ADA8D1A1D579A00E4E424 /* PushNotificationMaster.m in Sources */,
+				B96ADA901A1D74DF00E4E424 /* shareTableViewCell.m in Sources */,
 				B917D292196E0CDD008E418D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +544,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "H-ound/H-ound Fart Ed.-Prefix.pch";
 				INFOPLIST_FILE = "H-ound/H-ound Fart Ed.-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "H-ound Fart Ed.";
 				PROVISIONING_PROFILE = "4c48fc25-40eb-429c-8648-4126f276a530";
 				WRAPPER_EXTENSION = app;
@@ -514,6 +565,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "H-ound/H-ound Fart Ed.-Prefix.pch";
 				INFOPLIST_FILE = "H-ound/H-ound Fart Ed.-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "H-ound Fart Ed.";
 				PROVISIONING_PROFILE = "4c48fc25-40eb-429c-8648-4126f276a530";
 				WRAPPER_EXTENSION = app;
