@@ -35,28 +35,28 @@
     [Parse setApplicationId:[parseData objectForKey:@"applicationId"]
                   clientKey:[parseData objectForKey:@"clientKey"]];
     
-    UIMutableUserNotificationAction *action1 = [[UIMutableUserNotificationAction alloc]init];
-    
-    [action1 setActivationMode:UIUserNotificationActivationModeBackground];
-    [action1 setTitle:@"Refart"];
-    [action1 setIdentifier:@"REFART"];
-    [action1 setDestructive:YES];
-    [action1 setAuthenticationRequired:NO];
-    
-    UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc]init];
-    [category setIdentifier:@"actionable"];
-    [category setActions:@[action1] forContext:UIUserNotificationActionContextDefault];
-    
-    
-    //-- Set Notification
-    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
-    {
+    if (IS_OS_8_OR_LATER) {
+        UIMutableUserNotificationAction *action1 = [[UIMutableUserNotificationAction alloc]init];
+        
+        [action1 setActivationMode:UIUserNotificationActivationModeBackground];
+        [action1 setTitle:@"Refart"];
+        [action1 setIdentifier:@"REFART"];
+        [action1 setDestructive:YES];
+        [action1 setAuthenticationRequired:NO];
+        
+        UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc]init];
+        [category setIdentifier:@"actionable"];
+        [category setActions:@[action1] forContext:UIUserNotificationActionContextDefault];
+
         // iOS 8 Notifications
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:[NSSet setWithObject:category]]];
         
         [application registerForRemoteNotifications];
     }
-    else
+    
+    
+    //-- Set Notification
+    if (![application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
     {
         // iOS < 8 Notifications
         [application registerForRemoteNotificationTypes:
