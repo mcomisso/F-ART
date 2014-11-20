@@ -116,77 +116,105 @@
 {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    if ([_contacts count] == 0) {
-        return 1;
-    }
-    return [_contacts count];
+    return _contacts.count + 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int tester = (int)[_contacts count];
-    
-    if (tester == 0) {
-        static NSString *shareCellIdentifier = @"shareCellIdentifier";
+    if (indexPath.row == _contacts.count) {
+        static NSString *shareCellIdentifier = @"shareCellIdenfifier";
         shareTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:shareCellIdentifier];
         
         if (cell == nil) {
-            cell = [[shareTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:shareCellIdentifier];
+            cell = [[shareTableViewCell alloc]initWithFrame:CGRectZero];
         }
+        if (_contacts.count == 0) {
+            cell.labelText.text = @"You have no friends here. Tap to share and fart'em all!";
+        }
+        else
+        {
+            cell.labelText.text = @"Tap to share!";
+        }
+
         
         return cell;
     }
-    static NSString *cellIdentifier = @"cellIdentifier";
-    contactCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[contactCellTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
-                                              reuseIdentifier:cellIdentifier];
+    else
+    {
+        static NSString *cellIdentifier = @"cellIdentifier";
+        contactCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[contactCellTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
+                                                  reuseIdentifier:cellIdentifier];
+        }
+        
+        //Set the content of every cell
+        cell.backgroundColor = [UIColor flatPomegranateColor];
+        cell.contactName.text = [[_contacts objectAtIndex:indexPath.row] objectForKey:@"name"];
+        cell.contactLastName.text = [[_contacts objectAtIndex:indexPath.row] objectForKey:@"surname"];
+        cell.contactImage.layer.cornerRadius = 10.f;
+        cell.contactImage.layer.masksToBounds = YES;
+        
+        [FBRequestConnection
+         startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+             if (!error) {
+                 NSString *facebookId = [[_contacts objectAtIndex:indexPath.row]objectForKey:@"facebookId"];
+                 
+                 NSURL *profilePictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", facebookId]];
+                 
+                 [cell.contactImage sd_setImageWithURL:profilePictureURL
+                                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+                 
+             }
+             else
+             {
+                 NSLog(@"userSettings: %@, %@", [error localizedDescription], [error localizedFailureReason]);
+             }
+         }];
+        
+        return cell;
+        
     }
-    
-    //Set the content of every cell
-    cell.backgroundColor = [UIColor flatPomegranateColor];
-    cell.contactName.text = [[_contacts objectAtIndex:indexPath.row] objectForKey:@"name"];
-    cell.contactImage.layer.cornerRadius = 10.f;
-    cell.contactImage.layer.masksToBounds = YES;
-    
-    [FBRequestConnection
-     startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-         if (!error) {
-             NSString *facebookId = [[_contacts objectAtIndex:indexPath.row]objectForKey:@"facebookId"];
-             
-             NSURL *profilePictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", facebookId]];
-             
-             [cell.contactImage sd_setImageWithURL:profilePictureURL
-                                  placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-             
-         }
-         else
-         {
-             NSLog(@"userSettings: %@, %@", [error localizedDescription], [error localizedFailureReason]);
-         }
-     }];
-    
-    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PushNotificationMaster *pushMaster = [PushNotificationMaster new];
     
-    PFUser *touchedUser = [_contacts objectAtIndex:indexPath.row];
-    //Send notification to parse servers
-
-    //Userchannel = "ch" + username
-    NSString *userChannel = [@"ch" stringByAppendingString:[touchedUser objectForKey:@"username"]];
-
-    [pushMaster sendPushNotificationToUserChannel:userChannel];
-}
-
-
-- (IBAction)requestInfoForUser:(id)sender {
-    
+    if (indexPath.row == _contacts.count) {
+        NSLog(@"Share visual");
+        NSString *shareString = [NSString stringWithFormat:@"Let's fart together!"];
+        NSArray *shareContent = @[shareString];
+        
+        NSArray *excludedActivities = @[UIActivityTypeAddToReadingList,
+                                        UIActivityTypeAirDrop,
+                                        UIActivityTypeAssignToContact,
+                                        UIActivityTypeCopyToPasteboard,
+                                        UIActivityTypeMail,
+                                        UIActivityTypePostToFlickr,
+                                        UIActivityTypePostToVimeo,
+                                        UIActivityTypePrint,
+                                        UIActivityTypeSaveToCameraRoll];
+        UIActivityViewController *activityViewController = [[UIActivityViewController alloc]initWithActivityItems:shareContent applicationActivities:nil];
+        
+        activityViewController.excludedActivityTypes = excludedActivities;
+        
+        [self presentViewController:activityViewController animated:YES completion:nil];
+        
+    }
+    else
+    {
+        PushNotificationMaster *pushMaster = [PushNotificationMaster new];
+        
+        PFUser *touchedUser = [_contacts objectAtIndex:indexPath.row];
+        //Send notification to parse servers
+        
+        //Userchannel = "ch" + username
+        NSString *userChannel = [@"ch" stringByAppendingString:[touchedUser objectForKey:@"username"]];
+        
+        [pushMaster sendPushNotificationToUserChannel:userChannel];
+    }
 }
 
 

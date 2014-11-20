@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface contactCellTableViewCell : UITableViewCell
+
 @property (strong, nonatomic) IBOutlet UILabel *contactName;
+@property (strong, nonatomic) IBOutlet UILabel *contactLastName;
 @property (strong, nonatomic) IBOutlet UIImageView *contactImage;
 
 @end
