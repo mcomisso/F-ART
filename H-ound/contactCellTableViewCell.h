@@ -11,6 +11,5 @@
 @interface contactCellTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *contactName;
 @property (strong, nonatomic) IBOutlet UIImageView *contactImage;
-@property (strong, nonatomic) IBOutlet UILabel *statusOfUser;
 
 @end
