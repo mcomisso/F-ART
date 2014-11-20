@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface shareTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *labelText;
 
 @end
