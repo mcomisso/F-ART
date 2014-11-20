@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MoPub/MPAdView.h>
 
-@interface contactsViewController : UIViewController
+@interface contactsViewController : UIViewController <MPAdViewDelegate>
+
+@property (nonatomic, retain) MPAdView *adView;
+
 
 @end

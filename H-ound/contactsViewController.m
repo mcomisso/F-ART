@@ -8,7 +8,12 @@
 
 #import "contactsViewController.h"
 #import "contactCellTableViewCell.h"
+#import "shareTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+
+#import <CWStatusBarNotification/CWStatusBarNotification.h>
+
+#import "PushNotificationMaster.h"
 
 
 @interface contactsViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -23,6 +28,17 @@
 
 - (void)viewDidLoad
 {
+    
+    // TODO: Replace this test id with your personal ad unit id
+    MPAdView* adView = [[MPAdView alloc] initWithAdUnitId:@"0fd404de447942edb7610228cb412614"
+                                                     size:MOPUB_BANNER_SIZE];
+    self.adView = adView;
+    self.adView.delegate = self;
+    self.adView.frame = CGRectMake(0, self.view.bounds.size.height - MOPUB_BANNER_SIZE.height,
+                                   MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
+    [self.view addSubview:self.adView];
+    [self.adView loadAd];
+    
     [super viewDidLoad];
 
     self.navigationController.navigationBarHidden = NO;
@@ -36,27 +52,48 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self fetchUsers];
-}
-- (IBAction)refreshTableButton:(id)sender {
-    [self fetchUsers];
+    [self requestMyFacebookFriends];
 }
 
--(void)fetchUsers
+#pragma mark - <MPAdViewDelegate>
+- (UIViewController *)viewControllerForPresentingModalView {
+    return self;
+}
+
+- (IBAction)refreshTableButton:(id)sender {
+    [self requestMyFacebookFriends];
+}
+
+-(void)requestMyFacebookFriends
 {
-    PFQuery *searchAllContactsOfHfarm = [PFUser query];
-    searchAllContactsOfHfarm.cachePolicy = kPFCachePolicyNetworkElseCache;
-    //    [searchAllContactsOfHfarm whereKey:@"objectId" notEqualTo:[PFUser currentUser].objectId];
-    [searchAllContactsOfHfarm findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
-            //NSLog(@"%@", [objects[0] description]);
-            _contacts = [NSMutableArray arrayWithArray:objects];
-            [self.tableView reloadData];
+            NSArray *friendsObject = [result objectForKey:@"data"];
+            NSMutableArray *friendsIds = [NSMutableArray arrayWithCapacity:friendsObject.count];
+            for (NSDictionary *friendObject in friendsObject) {
+                [friendsIds addObject:[friendObject objectForKey:@"id"]];
+            }
+            PFQuery *searchAllContacts = [PFUser query];
+            searchAllContacts.cachePolicy = kPFCachePolicyNetworkElseCache;
+            [searchAllContacts whereKey:@"facebookId" containedIn:friendsIds];
+            
+            [searchAllContacts findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error) {
+                    //NSLog(@"%@", [objects[0] description]);
+                    _contacts = [NSMutableArray arrayWithArray:objects];
+                    [self.tableView reloadData];
+                }
+                else
+                {
+                    NSLog(@"Error while querying the database for matching friends. Description: %@, Failure: %@", [error localizedDescription], [error localizedFailureReason]);
+                }
+            }];
         }
         else
         {
-            NSLog(@"Description: %@, Failure: %@", [error localizedDescription], [error localizedFailureReason]);
+            NSLog(@"You have no friends. %@ %@", [error localizedDescription], [error localizedFailureReason]);
         }
+
     }];
 }
 
@@ -79,18 +116,29 @@
 {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
+    if ([_contacts count] == 0) {
+        return 1;
+    }
     return [_contacts count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    int tester = (int)[_contacts count];
+    
+    if (tester == 0) {
+        static NSString *shareCellIdentifier = @"shareCellIdentifier";
+        shareTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:shareCellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[shareTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:shareCellIdentifier];
+        }
+        
+        return cell;
+    }
     static NSString *cellIdentifier = @"cellIdentifier";
-    
     contactCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    //Setup cell elemnents
-    cell.statusOfUser.layer.cornerRadius = 5.f;
     
     if (cell == nil) {
         cell = [[contactCellTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
@@ -102,16 +150,6 @@
     cell.contactName.text = [[_contacts objectAtIndex:indexPath.row] objectForKey:@"name"];
     cell.contactImage.layer.cornerRadius = 10.f;
     cell.contactImage.layer.masksToBounds = YES;
-    //    NSLog(@"%@", [[[_contacts objectAtIndex:indexPath.row] objectForKey:@"inside"] description]);
-    if ([[_contacts objectAtIndex:indexPath.row] objectForKey:@"inside"]) {
-        cell.statusOfUser.backgroundColor = [UIColor flatMidnightBlueColor];
-        cell.statusOfUser.text = @"OUT";
-    }
-    else
-    {
-        cell.statusOfUser.backgroundColor = [UIColor flatEmeraldColor];
-        cell.statusOfUser.text = @"IN";
-    }
     
     [FBRequestConnection
      startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
@@ -135,77 +173,17 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    PushNotificationMaster *pushMaster = [PushNotificationMaster new];
+    
     PFUser *touchedUser = [_contacts objectAtIndex:indexPath.row];
-    //Ha toccato una row @indexpath
     //Send notification to parse servers
-    NSString *nameOfTouchedUser = [touchedUser objectForKey:@"name"];
-    //NSString *usernameOfTouchedUser = [[_contacts objectAtIndex:indexPath.row]objectForKey:@"username"];
-    
+
+    //Userchannel = "ch" + username
     NSString *userChannel = [@"ch" stringByAppendingString:[touchedUser objectForKey:@"username"]];
-    NSLog(@"%@", userChannel);
-    PFQuery *pushQuery = [PFInstallation query];
-    [pushQuery whereKey:@"user" equalTo:[touchedUser objectForKey:@"username"]];
-    
-    PFPush *sendPush = [[PFPush alloc]init];
-    //    [sendPush setQuery:pushQuery];
-    [sendPush setData:@{@"title": [[PFUser currentUser]objectForKey:@"name"],
-                        @"alert":@"💨",
-                        @"sound":@"fart.caf",
-                        @"category":@"actionable",
-                        @"senderId":[[NSString stringWithFormat:@"ch"]stringByAppendingString:[[PFUser currentUser] objectForKey:@"username"]],
-                        @"t":@"m"}];
-    //    [sendPush setMessage:[[PFUser currentUser]objectForKey:@"name"]];
-    [sendPush setChannel:userChannel];
-    
-    //NSLog(@"Username: %@", usernameOfTouchedUser);
-    [sendPush sendPushInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            NSLog(@"Push notification sent to: %@, %@", nameOfTouchedUser, userChannel);
-        }
-        else
-        {
-            NSLog(@"Errors while sending push: %@, %@", [error localizedDescription], [error localizedFailureReason]);
-        }
-    }];
-    //Ogni user è un canale differente di push notification
-    //Iscrivo gli utenti l'un l'altro
-    
-    /*
-     PFQuery *pushQuery = [PFInstallation query];
-     [pushQuery whereKey:@"injuryReports" equalTo:YES];
-     
-     // Send push notification to query
-     PFPush *push = [[PFPush alloc] init];
-     [push setQuery:pushQuery]; // Set our Installation query
-     [push setMessage:@"Willie Hayes injured by own pop fly."];
-     [push sendPushInBackground];
-     */
-    
+
+    [pushMaster sendPushNotificationToUserChannel:userChannel];
 }
 
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    CATransform3D rotation;
-    rotation = CATransform3DMakeRotation((90.0*M_PI)/180, 0.0, 0.7, 0.4);
-    rotation.m34 = 1.0/ -600;
-    
-    //Defining Initial state
-    cell.layer.shadowColor = [[UIColor blackColor]CGColor];
-    cell.layer.shadowOffset = CGSizeMake(10, 10);
-    cell.alpha = 0;
-    cell.layer.transform = rotation;
-    cell.layer.anchorPoint = CGPointMake(0, 0.5);
-    
-    //Defining Final state
-    [UIView beginAnimations:@"rotation" context:NULL];
-    [UIView setAnimationDuration:0.8];
-    cell.layer.transform = CATransform3DIdentity;
-    cell.alpha = 1;
-    cell.layer.shadowOffset = CGSizeMake(0, 0);
-    
-    [UIView commitAnimations];
-}
 
 - (IBAction)requestInfoForUser:(id)sender {
     
