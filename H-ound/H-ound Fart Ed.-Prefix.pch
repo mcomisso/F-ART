@@ -16,4 +16,6 @@
     #import <Parse/Parse.h>
     #import <UIColor+FlatColors/UIColor+FlatColors.h>
 
+    #import "Constants.h"
+
 #endif
