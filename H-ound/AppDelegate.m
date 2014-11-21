@@ -20,6 +20,8 @@
 
 @interface AppDelegate()
 
+@property (nonatomic, strong) CWStatusBarNotification *notification;
+
 @end
 
 @implementation AppDelegate
@@ -116,27 +118,28 @@
     NSLog(@"AppDelegate did receive Remote Notification. %@", [userInfo description]);
     
 //    NSURL *soundUrl = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle]resourcePath], [[userInfo objectForKey:@"aps"]objectForKey:@"sound"]]];
-    NSString *path = [NSString stringWithFormat:@"%@/fart.caf", [[NSBundle mainBundle]resourcePath]];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"fart" ofType:@"caf"];
     NSURL *soundUrl = [NSURL fileURLWithPath:path];
     
     AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:nil];
     audioPlayer.numberOfLoops = 1;
     [audioPlayer play];
     
-    CWStatusBarNotification *notification = [CWStatusBarNotification new];
+    _notification = [CWStatusBarNotification new];
     
-    [notification displayNotificationWithMessage:[userInfo objectForKey:@"title"] forDuration:1.5f];
-    notification.notificationStyle = CWNotificationStyleNavigationBarNotification;
+    [_notification displayNotificationWithMessage:[[userInfo objectForKey:@"title"]stringByAppendingString:@" 💨"] completion:nil];
+    _notification.notificationStyle = CWNotificationStyleStatusBarNotification;
+
+    _notification.notificationAnimationInStyle = CWNotificationAnimationStyleTop;
+    _notification.notificationAnimationOutStyle = CWNotificationAnimationStyleTop;
     
-    notification.notificationTappedBlock = ^(void){
-        NSLog(@"Notification Tapped");
-        CWStatusBarNotification *sendNotification = [CWStatusBarNotification new];
-        
-        sendNotification.notificationAnimationInStyle = CWNotificationAnimationStyleTop;
-        sendNotification.notificationAnimationOutStyle = CWNotificationAnimationStyleBottom;
-        
-        [sendNotification displayNotificationWithMessage:@"Fart sent!" forDuration:1.f];
+    __weak typeof(self) weakSelf = self;
+    _notification.notificationTappedBlock = ^(void){
+        if (!weakSelf.notification.notificationIsDismissing) {
+            [weakSelf.notification dismissNotification];
+        }
     };
+    
 }
 
 -(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
