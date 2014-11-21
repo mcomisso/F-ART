@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *contacts;
+@property (nonatomic, strong) NSMutableArray *contactsImages;
 
 @end
 
@@ -60,6 +61,12 @@
     return self;
 }
 
+#pragma mark - Images
+-(void)loadImagesOfContacts
+{
+    //TODO: cache images of contacts ¿@{ID:photoid}?
+}
+
 - (IBAction)refreshTableButton:(id)sender {
     [self requestMyFacebookFriends];
 }
@@ -81,6 +88,8 @@
                 if (!error) {
                     //NSLog(@"%@", [objects[0] description]);
                     _contacts = [NSMutableArray arrayWithArray:objects];
+                    [self loadImagesOfContacts];
+                    
                     [self.tableView reloadData];
                 }
                 else
@@ -164,6 +173,9 @@
                  
                  NSURL *profilePictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", facebookId]];
                  
+                 cell.contactImage.contentMode = UIViewContentModeScaleAspectFill;
+                 cell.contactImage.clipsToBounds = YES;
+                 
                  [cell.contactImage sd_setImageWithURL:profilePictureURL
                                       placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
                  
@@ -215,6 +227,8 @@
         
         [pushMaster sendPushNotificationToUserChannel:userChannel];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
