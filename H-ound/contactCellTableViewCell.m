@@ -25,7 +25,6 @@
     // Initialization code
 }
 
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
@@ -35,10 +34,6 @@
     if (selected) {
         [self scaleToSmall];
     }
-    else
-    {
-        [self scaleToDefault];
-    }
 }
 
 #pragma mark - scale animations
@@ -47,7 +42,7 @@
     POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
     scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(0.95f, 0.95f)];
     [self.layer pop_addAnimation:scaleAnimation forKey:@"layerScaleSmallAnimation"];
-    [self performSelector:@selector(scaleToDefault) withObject:nil afterDelay:0.2];
+    [self performSelector:@selector(scaleToDefault) withObject:nil afterDelay:0.15];
 }
 
 - (void)scaleAnimation
