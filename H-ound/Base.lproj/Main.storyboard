@@ -91,11 +91,9 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teA-ce-YNW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teA-ce-YNW"/>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="v3N-hK-uht">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellIdentifier" rowHeight="80" id="Xhk-gj-eCl" customClass="contactCellTableViewCell">
@@ -164,7 +162,7 @@ Share and fart'em all!</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="v3N-hK-uht" firstAttribute="leading" secondItem="zs0-Q5-PYX" secondAttribute="leading" id="1gQ-Kr-k0d"/>
-                            <constraint firstItem="3yz-Zj-dAW" firstAttribute="top" secondItem="v3N-hK-uht" secondAttribute="bottom" constant="-49" id="Ta1-qq-jg3"/>
+                            <constraint firstItem="3yz-Zj-dAW" firstAttribute="top" secondItem="v3N-hK-uht" secondAttribute="bottom" id="Wxr-Nh-Gqp"/>
                             <constraint firstItem="v3N-hK-uht" firstAttribute="top" secondItem="33h-77-YX4" secondAttribute="bottom" id="XCA-2p-Jbs"/>
                             <constraint firstAttribute="trailing" secondItem="v3N-hK-uht" secondAttribute="trailing" id="hHn-xS-Cro"/>
                         </constraints>

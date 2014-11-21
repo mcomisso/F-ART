@@ -33,8 +33,11 @@
     //NSLog(@"Username: %@", usernameOfTouchedUser);
     [sendPush sendPushInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
+            NSArray *fartMessage = @[@"PROOOOT",
+                                     @"Farted Sent!",
+                                     @"Wow, that was huge.",
+                                     @"You farted your friend"];
             
-            NSArray *fartMessage = @[@"PROOOOT", @"Farted Sent!", @"Wow, that was huge.", @"You farted your friend"];
             int selector = arc4random() % [fartMessage count];
             
             NSLog(@"Push notification sent!");
