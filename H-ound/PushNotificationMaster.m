@@ -20,8 +20,11 @@
 -(void)sendPushNotificationToUserChannel:(NSString *)userChannel
 {
     PFPush *sendPush = [[PFPush alloc]init];
+    
+    NSString *alert = [[@"" stringByAppendingString:[[PFUser currentUser]objectForKey:@"name"]]stringByAppendingString:@" 💨"];
+    
     [sendPush setData:@{@"title": [[PFUser currentUser]objectForKey:@"name"],
-                        @"alert":@"💨",
+                        @"alert":alert,
                         @"sound":@"fart.caf",
                         @"category":@"actionable",
                         @"senderId":[[NSString stringWithFormat:@"ch"]stringByAppendingString:[[PFUser currentUser] objectForKey:@"username"]]}];
