@@ -12,8 +12,11 @@
 #import <Fabric/Fabric.h>
 #import <MoPub/MoPub.h>
 
+#import <CWStatusBarNotification/CWStatusBarNotification.h>
+
 #import "PushNotificationMaster.h"
 
+@import AVFoundation;
 
 @interface AppDelegate()
 
@@ -112,12 +115,28 @@
 {
     NSLog(@"AppDelegate did receive Remote Notification. %@", [userInfo description]);
     
-    UIAlertView *messageNotification = [[UIAlertView alloc]initWithTitle:[userInfo objectForKey:@"title"]
-                                                                 message:[userInfo objectForKey:@"alert"]
-                                                                delegate:self
-                                                       cancelButtonTitle:@"OK"
-                                                       otherButtonTitles:nil, nil];
-    [messageNotification show];
+//    NSURL *soundUrl = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle]resourcePath], [[userInfo objectForKey:@"aps"]objectForKey:@"sound"]]];
+    NSString *path = [NSString stringWithFormat:@"%@/fart.caf", [[NSBundle mainBundle]resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:nil];
+    audioPlayer.numberOfLoops = 1;
+    [audioPlayer play];
+    
+    CWStatusBarNotification *notification = [CWStatusBarNotification new];
+    
+    [notification displayNotificationWithMessage:[userInfo objectForKey:@"title"] forDuration:1.5f];
+    notification.notificationStyle = CWNotificationStyleNavigationBarNotification;
+    
+    notification.notificationTappedBlock = ^(void){
+        NSLog(@"Notification Tapped");
+        CWStatusBarNotification *sendNotification = [CWStatusBarNotification new];
+        
+        sendNotification.notificationAnimationInStyle = CWNotificationAnimationStyleTop;
+        sendNotification.notificationAnimationOutStyle = CWNotificationAnimationStyleBottom;
+        
+        [sendNotification displayNotificationWithMessage:@"Fart sent!" forDuration:1.f];
+    };
 }
 
 -(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
