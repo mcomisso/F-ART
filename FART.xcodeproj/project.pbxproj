@@ -62,14 +62,14 @@
 		B907E0301A140E10009713F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		B907E0331A140EAA009713F5 /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = SOURCE_ROOT; };
 		B907E0341A140EAA009713F5 /* MoPub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoPub.bundle; path = MoPub.framework/Versions/A/Resources/MoPub.bundle; sourceTree = SOURCE_ROOT; };
-		B917D282196E0CDD008E418D /* H-ound Fart Ed..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H-ound Fart Ed..app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B917D282196E0CDD008E418D /* FART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B917D285196E0CDD008E418D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B917D287196E0CDD008E418D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B917D289196E0CDD008E418D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B917D28D196E0CDD008E418D /* H-ound Fart Ed.-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "H-ound Fart Ed.-Info.plist"; sourceTree = "<group>"; };
+		B917D28D196E0CDD008E418D /* FART-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FART-Info.plist"; sourceTree = "<group>"; };
 		B917D28F196E0CDD008E418D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B917D291196E0CDD008E418D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B917D293196E0CDD008E418D /* H-ound Fart Ed.-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "H-ound Fart Ed.-Prefix.pch"; sourceTree = "<group>"; };
+		B917D293196E0CDD008E418D /* FART-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FART-Prefix.pch"; sourceTree = "<group>"; };
 		B917D294196E0CDD008E418D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B917D295196E0CDD008E418D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B917D298196E0CDD008E418D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		B917D283196E0CDD008E418D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B917D282196E0CDD008E418D /* H-ound Fart Ed..app */,
+				B917D282196E0CDD008E418D /* FART.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,10 +228,10 @@
 				B907E0341A140EAA009713F5 /* MoPub.bundle */,
 				B907E02F1A140E10009713F5 /* Crashlytics.framework */,
 				B907E0301A140E10009713F5 /* Fabric.framework */,
-				B917D28D196E0CDD008E418D /* H-ound Fart Ed.-Info.plist */,
+				B917D28D196E0CDD008E418D /* FART-Info.plist */,
 				B917D28E196E0CDD008E418D /* InfoPlist.strings */,
 				B917D291196E0CDD008E418D /* main.m */,
-				B917D293196E0CDD008E418D /* H-ound Fart Ed.-Prefix.pch */,
+				B917D293196E0CDD008E418D /* FART-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,9 +288,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B917D281196E0CDD008E418D /* H-ound Fart Ed. */ = {
+		B917D281196E0CDD008E418D /* FART */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B917D2B4196E0CDD008E418D /* Build configuration list for PBXNativeTarget "H-ound Fart Ed." */;
+			buildConfigurationList = B917D2B4196E0CDD008E418D /* Build configuration list for PBXNativeTarget "FART" */;
 			buildPhases = (
 				6C2A2DD9FFB74D5FAD415AC2 /* Check Pods Manifest.lock */,
 				B917D27E196E0CDD008E418D /* Sources */,
@@ -304,9 +304,9 @@
 			);
 			dependencies = (
 			);
-			name = "H-ound Fart Ed.";
+			name = FART;
 			productName = "H-ound";
-			productReference = B917D282196E0CDD008E418D /* H-ound Fart Ed..app */;
+			productReference = B917D282196E0CDD008E418D /* FART.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -331,7 +331,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B917D27D196E0CDD008E418D /* Build configuration list for PBXProject "H-ound Fart Ed." */;
+			buildConfigurationList = B917D27D196E0CDD008E418D /* Build configuration list for PBXProject "FART" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -344,7 +344,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B917D281196E0CDD008E418D /* H-ound Fart Ed. */,
+				B917D281196E0CDD008E418D /* FART */,
 			);
 		};
 /* End PBXProject section */
@@ -492,8 +492,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "c7c5e2f9-e026-4348-bc64-d068ba665774";
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -526,7 +526,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "c7c5e2f9-e026-4348-bc64-d068ba665774";
+				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -544,11 +544,12 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "H-ound/H-ound Fart Ed.-Prefix.pch";
-				INFOPLIST_FILE = "H-ound/H-ound Fart Ed.-Info.plist";
+				GCC_PREFIX_HEADER = "H-ound/FART-Prefix.pch";
+				INFOPLIST_FILE = "H-ound/FART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "H-ound Fart Ed.";
-				PROVISIONING_PROFILE = "c7c5e2f9-e026-4348-bc64-d068ba665774";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = FART;
+				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -565,11 +566,11 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "H-ound/H-ound Fart Ed.-Prefix.pch";
-				INFOPLIST_FILE = "H-ound/H-ound Fart Ed.-Info.plist";
+				GCC_PREFIX_HEADER = "H-ound/FART-Prefix.pch";
+				INFOPLIST_FILE = "H-ound/FART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "H-ound Fart Ed.";
-				PROVISIONING_PROFILE = "c7c5e2f9-e026-4348-bc64-d068ba665774";
+				PRODUCT_NAME = FART;
+				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -577,7 +578,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B917D27D196E0CDD008E418D /* Build configuration list for PBXProject "H-ound Fart Ed." */ = {
+		B917D27D196E0CDD008E418D /* Build configuration list for PBXProject "FART" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B917D2B2196E0CDD008E418D /* Debug */,
@@ -586,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B917D2B4196E0CDD008E418D /* Build configuration list for PBXNativeTarget "H-ound Fart Ed." */ = {
+		B917D2B4196E0CDD008E418D /* Build configuration list for PBXNativeTarget "FART" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B917D2B5196E0CDD008E418D /* Debug */,

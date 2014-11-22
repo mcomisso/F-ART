@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B917D281196E0CDD008E418D"
-               BuildableName = "H-ound Fart Ed..app"
-               BlueprintName = "H-ound Fart Ed."
-               ReferencedContainer = "container:H-ound Fart Ed..xcodeproj">
+               BuildableName = "FART.app"
+               BlueprintName = "FART"
+               ReferencedContainer = "container:FART.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "B917D2A2196E0CDD008E418D"
                BuildableName = "H-ound Fart Ed.Tests.xctest"
                BlueprintName = "H-ound Fart Ed.Tests"
-               ReferencedContainer = "container:H-ound Fart Ed..xcodeproj">
+               ReferencedContainer = "container:FART.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "B917D2A2196E0CDD008E418D"
                BuildableName = "H-ound Fart Ed.Tests.xctest"
                BlueprintName = "H-ound Fart Ed.Tests"
-               ReferencedContainer = "container:H-ound Fart Ed..xcodeproj">
+               ReferencedContainer = "container:FART.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B917D281196E0CDD008E418D"
-            BuildableName = "H-ound Fart Ed..app"
-            BlueprintName = "H-ound Fart Ed."
-            ReferencedContainer = "container:H-ound Fart Ed..xcodeproj">
+            BuildableName = "FART.app"
+            BlueprintName = "FART"
+            ReferencedContainer = "container:FART.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B917D281196E0CDD008E418D"
-            BuildableName = "H-ound Fart Ed..app"
-            BlueprintName = "H-ound Fart Ed."
-            ReferencedContainer = "container:H-ound Fart Ed..xcodeproj">
+            BuildableName = "FART.app"
+            BlueprintName = "FART"
+            ReferencedContainer = "container:FART.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B917D281196E0CDD008E418D"
-            BuildableName = "H-ound Fart Ed..app"
-            BlueprintName = "H-ound Fart Ed."
-            ReferencedContainer = "container:H-ound Fart Ed..xcodeproj">
+            BuildableName = "FART.app"
+            BlueprintName = "FART"
+            ReferencedContainer = "container:FART.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
