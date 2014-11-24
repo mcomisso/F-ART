@@ -11,6 +11,7 @@
 		49E4FC5D1A23B63200908EDA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FC5A1A23B63200908EDA /* Crashlytics.framework */; };
 		49E4FC5E1A23B63200908EDA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FC5B1A23B63200908EDA /* Fabric.framework */; };
 		49E4FC5F1A23B63200908EDA /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FC5C1A23B63200908EDA /* MoPub.framework */; };
+		49E4FC611A23B89900908EDA /* parseData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E4FC601A23B89900908EDA /* parseData.plist */; };
 		B45A25CDC583482799DADC2C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14F84AC36DF49ADAA85E773 /* libPods.a */; };
 		B907E0311A140E10009713F5 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E02F1A140E10009713F5 /* Crashlytics.framework */; };
 		B907E0321A140E10009713F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E0301A140E10009713F5 /* Fabric.framework */; };
@@ -43,7 +44,6 @@
 		B96ADA8D1A1D579A00E4E424 /* PushNotificationMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */; };
 		B96ADA901A1D74DF00E4E424 /* shareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */; };
 		B990A19E197DBB1600B276E9 /* feedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B990A19D197DBB1600B276E9 /* feedbackViewController.m */; };
-		B9B2F538196FEA2E00FC857D /* parseData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9B2F537196FEA2E00FC857D /* parseData.plist */; };
 		B9DCAB031A099C13000940C7 /* fart.caf in Resources */ = {isa = PBXBuildFile; fileRef = B9DCAB021A099C13000940C7 /* fart.caf */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +65,7 @@
 		49E4FC5A1A23B63200908EDA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		49E4FC5B1A23B63200908EDA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		49E4FC5C1A23B63200908EDA /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
+		49E4FC601A23B89900908EDA /* parseData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parseData.plist; sourceTree = "<group>"; };
 		B907E02F1A140E10009713F5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		B907E0301A140E10009713F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		B907E0331A140EAA009713F5 /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = SOURCE_ROOT; };
@@ -113,7 +114,6 @@
 		B96ADA921A1E0E5100E4E424 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		B990A19C197DBB1600B276E9 /* feedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackViewController.h; sourceTree = "<group>"; };
 		B990A19D197DBB1600B276E9 /* feedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackViewController.m; sourceTree = "<group>"; };
-		B9B2F537196FEA2E00FC857D /* parseData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parseData.plist; sourceTree = "<group>"; };
 		B9DCAB021A099C13000940C7 /* fart.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fart.caf; sourceTree = "<group>"; };
 		BCEF75A05186E1500F1FD2BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F14F84AC36DF49ADAA85E773 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,7 +228,7 @@
 				B917D29B196E0CDD008E418D /* ViewController.m */,
 				B917D29D196E0CDD008E418D /* Images.xcassets */,
 				B917D28C196E0CDD008E418D /* Supporting Files */,
-				B9B2F537196FEA2E00FC857D /* parseData.plist */,
+				49E4FC601A23B89900908EDA /* parseData.plist */,
 			);
 			path = "H-ound";
 			sourceTree = "<group>";
@@ -368,8 +368,8 @@
 			files = (
 				B917D29E196E0CDD008E418D /* Images.xcassets in Resources */,
 				B917D290196E0CDD008E418D /* InfoPlist.strings in Resources */,
-				B9B2F538196FEA2E00FC857D /* parseData.plist in Resources */,
 				B907E0361A140EAA009713F5 /* MoPub.bundle in Resources */,
+				49E4FC611A23B89900908EDA /* parseData.plist in Resources */,
 				B9DCAB031A099C13000940C7 /* fart.caf in Resources */,
 				B917D299196E0CDD008E418D /* Main.storyboard in Resources */,
 			);
