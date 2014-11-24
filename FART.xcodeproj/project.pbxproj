@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49E4FC591A23B5FC00908EDA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FC581A23B5FC00908EDA /* FacebookSDK.framework */; };
+		49E4FC5D1A23B63200908EDA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FC5A1A23B63200908EDA /* Crashlytics.framework */; };
+		49E4FC5E1A23B63200908EDA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FC5B1A23B63200908EDA /* Fabric.framework */; };
+		49E4FC5F1A23B63200908EDA /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FC5C1A23B63200908EDA /* MoPub.framework */; };
 		B45A25CDC583482799DADC2C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14F84AC36DF49ADAA85E773 /* libPods.a */; };
 		B907E0311A140E10009713F5 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E02F1A140E10009713F5 /* Crashlytics.framework */; };
 		B907E0321A140E10009713F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E0301A140E10009713F5 /* Fabric.framework */; };
@@ -23,7 +27,6 @@
 		B917D29E196E0CDD008E418D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B917D29D196E0CDD008E418D /* Images.xcassets */; };
 		B917D2BB196E0CE9008E418D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2BA196E0CE9008E418D /* CoreLocation.framework */; };
 		B917D2BD196E0CF0008E418D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2BC196E0CF0008E418D /* CoreBluetooth.framework */; };
-		B917D2BF196E0D91008E418D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2BE196E0D91008E418D /* Parse.framework */; };
 		B917D2C1196E0DC6008E418D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2C0196E0DC6008E418D /* AudioToolbox.framework */; };
 		B917D2C3196E0DCC008E418D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2C2196E0DCC008E418D /* CFNetwork.framework */; };
 		B917D2C5196E0DDC008E418D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2C4196E0DDC008E418D /* libz.dylib */; };
@@ -58,6 +61,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		49E4FC581A23B5FC00908EDA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		49E4FC5A1A23B63200908EDA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		49E4FC5B1A23B63200908EDA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		49E4FC5C1A23B63200908EDA /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
 		B907E02F1A140E10009713F5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		B907E0301A140E10009713F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		B907E0331A140EAA009713F5 /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = SOURCE_ROOT; };
@@ -82,7 +89,6 @@
 		B917D2B0196E0CDD008E418D /* H_oundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = H_oundTests.m; sourceTree = "<group>"; };
 		B917D2BA196E0CE9008E418D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B917D2BC196E0CF0008E418D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		B917D2BE196E0D91008E418D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B917D2C0196E0DC6008E418D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B917D2C2196E0DCC008E418D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B917D2C4196E0DDC008E418D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -119,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E4FC5F1A23B63200908EDA /* MoPub.framework in Frameworks */,
 				B917D2D5196E0F5A008E418D /* Social.framework in Frameworks */,
 				B917D2D3196E0F4E008E418D /* Accounts.framework in Frameworks */,
 				B917D2D1196E0F05008E418D /* FacebookSDK.framework in Frameworks */,
@@ -132,13 +139,15 @@
 				B917D2C1196E0DC6008E418D /* AudioToolbox.framework in Frameworks */,
 				B907E0311A140E10009713F5 /* Crashlytics.framework in Frameworks */,
 				B917D2BD196E0CF0008E418D /* CoreBluetooth.framework in Frameworks */,
+				49E4FC5D1A23B63200908EDA /* Crashlytics.framework in Frameworks */,
 				B917D2BB196E0CE9008E418D /* CoreLocation.framework in Frameworks */,
 				B917D288196E0CDD008E418D /* CoreGraphics.framework in Frameworks */,
 				B917D28A196E0CDD008E418D /* UIKit.framework in Frameworks */,
-				B917D2BF196E0D91008E418D /* Parse.framework in Frameworks */,
 				B917D286196E0CDD008E418D /* Foundation.framework in Frameworks */,
 				B907E0351A140EAA009713F5 /* MoPub.framework in Frameworks */,
 				B45A25CDC583482799DADC2C /* libPods.a in Frameworks */,
+				49E4FC591A23B5FC00908EDA /* FacebookSDK.framework in Frameworks */,
+				49E4FC5E1A23B63200908EDA /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,10 @@
 		B917D284196E0CDD008E418D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49E4FC5A1A23B63200908EDA /* Crashlytics.framework */,
+				49E4FC5B1A23B63200908EDA /* Fabric.framework */,
+				49E4FC5C1A23B63200908EDA /* MoPub.framework */,
+				49E4FC581A23B5FC00908EDA /* FacebookSDK.framework */,
 				B917D2D4196E0F5A008E418D /* Social.framework */,
 				B917D2D2196E0F4E008E418D /* Accounts.framework */,
 				B917D2D0196E0F05008E418D /* FacebookSDK.framework */,
@@ -186,7 +199,6 @@
 				B917D2C4196E0DDC008E418D /* libz.dylib */,
 				B917D2C2196E0DCC008E418D /* CFNetwork.framework */,
 				B917D2C0196E0DC6008E418D /* AudioToolbox.framework */,
-				B917D2BE196E0D91008E418D /* Parse.framework */,
 				B917D2BC196E0CF0008E418D /* CoreBluetooth.framework */,
 				B917D2BA196E0CE9008E418D /* CoreLocation.framework */,
 				B917D285196E0CDD008E418D /* Foundation.framework */,
