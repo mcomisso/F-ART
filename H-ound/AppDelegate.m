@@ -30,8 +30,6 @@
 {
     [Fabric with:@[CrashlyticsKit, MoPubKit]];
 
-
-    
     NSString *path = [[NSBundle mainBundle] pathForResource:
                       @"parseData" ofType:@"plist"];
     NSMutableDictionary *parseData = [[NSMutableDictionary alloc]initWithContentsOfFile:path];

@@ -51,15 +51,21 @@
             NSLog(@"Errors while sending push: %@, %@", [error localizedDescription], [error localizedFailureReason]);
         }
     }];
-
 }
 
 -(void)sendPushNotificationViaCloudCode:(NSString *)userTarget
 {
-    [PFCloud callFunctionInBackground:@"sendPushToUser" withParameters:@{@"recipiendId":userTarget, @"message": @"💨"} block:^(id object, NSError *error) {
+    [PFCloud callFunctionInBackground:@"sendPushToUser"
+                       withParameters:@{@"recipiendId":userTarget,
+                                        @"message": @" 💨",
+                                        @"category":@"actionable",
+                                        @"sound":@"fart.caf",
+                                        @"title":[[PFUser currentUser]objectForKey:@"name"],
+                                        @"senderId":[[NSString stringWithFormat:@"ch"]stringByAppendingString:[[PFUser currentUser] objectForKey:@"username"]]}
+                                block:^(id object, NSError *error) {
         if (!error) {
-            //Push was successfully sent
-//            CWStatusBarNotification *statusBarNotification = [CWStatusBarNotification new];
+            // Push was successfully sent
+            // CWStatusBarNotification *statusBarNotification = [CWStatusBarNotification new];
         }
     }];
 }
