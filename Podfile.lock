@@ -5,7 +5,7 @@ PODS:
   - NGAParallaxMotion (1.0.2)
   - pop (1.0.6)
   - SDWebImage (3.7.0):
-    - SDWebImage/Core
+    - SDWebImage/Core (= 3.7.0)
   - SDWebImage/Core (3.7.0)
   - UIColor+FlatColors (0.0.2)
   - UIImage+BlurredFrame (0.0.4)
@@ -30,4 +30,4 @@ SPEC CHECKSUMS:
   UIColor+FlatColors: 15506ef6472e26a751033f2f2469283800bcb906
   UIImage+BlurredFrame: 0c38f5760d72125c47d16001a88faaac573bd35d
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.35.0

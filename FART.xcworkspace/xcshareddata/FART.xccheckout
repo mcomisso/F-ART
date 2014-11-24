@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>24C54CDA-42A6-4F79-9AA8-C0F4EB081957</string>
+	<string>67272AE7-C499-447F-AB42-3BDE618B6E3F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>H-ound</string>
+	<string>FART</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>42EBD0EBFDE901F268BC044C8B34FB6C39081534</key>
-		<string>https://github.com/mcomisso/H-ound.git</string>
+		<key>48FC11642A2F08F733624377A58B274F758E1C4C</key>
+		<string>https://github.com/mcomisso/H-oundFartEd.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>H-ound.xcworkspace</string>
+	<string>FART.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>42EBD0EBFDE901F268BC044C8B34FB6C39081534</key>
+		<key>48FC11642A2F08F733624377A58B274F758E1C4C</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mcomisso/H-ound.git</string>
+	<string>https://github.com/mcomisso/H-oundFartEd.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>42EBD0EBFDE901F268BC044C8B34FB6C39081534</string>
+	<string>48FC11642A2F08F733624377A58B274F758E1C4C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>42EBD0EBFDE901F268BC044C8B34FB6C39081534</string>
+			<string>48FC11642A2F08F733624377A58B274F758E1C4C</string>
 			<key>IDESourceControlWCCName</key>
-			<string>H-ound</string>
+			<string>FART</string>
 		</dict>
 	</array>
 </dict>
