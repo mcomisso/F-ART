@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-#import <Fabric/Fabric.h>
 #import <MoPub/MoPub.h>
 
 #import <CWStatusBarNotification/CWStatusBarNotification.h>

@@ -1,9 +1,5 @@
 platform :ios, '7.0'
 
-#pod 'Bolts'
-pod 'Facebook-iOS-SDK'
-pod 'ParseFacebookUtils'
-pod 'Parse'
 pod 'SDWebImage', '~>3.6'
 pod 'UIImage+BlurredFrame'
 pod 'pop', '~> 1.0'
@@ -12,7 +8,7 @@ pod 'UIColor+FlatColors'
 pod 'CWStatusBarNotification', '~> 2.2.2'
 
 #Colors
-pod 'ChameleonFramework'
+#pod 'ChameleonFramework'
 
 #SpinnerView
 pod 'LLARingSpinnerView'

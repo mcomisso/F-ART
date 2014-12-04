@@ -39,7 +39,7 @@
                                    MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
     [self.view addSubview:self.adView];
     [self.adView loadAd];
-    
+
     [super viewDidLoad];
 
     self.navigationController.navigationBarHidden = NO;
