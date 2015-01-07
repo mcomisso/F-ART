@@ -14,4 +14,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *contactLastName;
 @property (strong, nonatomic) IBOutlet UIImageView *contactImage;
 
+@property (strong, nonatomic) UIColor *backgroundFlatColor;
+
 @end

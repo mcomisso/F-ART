@@ -17,9 +17,10 @@
 
 @import AVFoundation;
 
-@interface AppDelegate()
+@interface AppDelegate() <AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) CWStatusBarNotification *notification;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -27,15 +28,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
     [Fabric with:@[CrashlyticsKit, MoPubKit]];
 
     NSString *path = [[NSBundle mainBundle] pathForResource:
                       @"parseData" ofType:@"plist"];
     NSMutableDictionary *parseData = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
-    
+
     //Parse Initialization
+    [ParseCrashReporting enable];
     [Parse setApplicationId:[parseData objectForKey:@"applicationId"]
                   clientKey:[parseData objectForKey:@"clientKey"]];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptionsInBackground:launchOptions block:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            
+        }
+        else
+        {
+            NSLog(@"%@ - %@", error.localizedDescription, error.localizedFailureReason);
+        }
+    }];
     
     if (IS_OS_8_OR_LATER) {
         UIMutableUserNotificationAction *action1 = [[UIMutableUserNotificationAction alloc]init];
@@ -70,6 +83,7 @@
     
     //DONE!
     // Override point for customization after application launch.
+    
     return YES;
 }
 							
@@ -106,25 +120,43 @@
 #pragma mark - Notifications delegates methods
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    //Local Notification income
-    NSLog(@"[AppDelegate] Local notification received");
+    
 }
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    NSLog(@"AppDelegate did receive Remote Notification. %@", [userInfo description]);
-    
-//    NSURL *soundUrl = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle]resourcePath], [[userInfo objectForKey:@"aps"]objectForKey:@"sound"]]];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"fart" ofType:@"caf"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"fart" ofType:@"mp3"];
     NSURL *soundUrl = [NSURL fileURLWithPath:path];
+
     
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:nil];
-    audioPlayer.numberOfLoops = 1;
-    [audioPlayer play];
+    NSError *error;
+    
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    
+    NSError *sessionAudioError = nil;
+    
+    [session setCategory:AVAudioSessionCategoryPlayback error:&sessionAudioError];
+    
+    _audioPlayer = [[AVAudioPlayer alloc]
+                    initWithContentsOfURL:soundUrl
+                    error:&error];
+    if (error)
+    {
+        NSLog(@"Error in audioPlayer: %@",
+              [error localizedDescription]);
+    } else {
+        _audioPlayer.delegate = self;
+        [_audioPlayer prepareToPlay];
+        _audioPlayer.numberOfLoops = 1;
+        
+        [_audioPlayer play];
+    }
     
     _notification = [CWStatusBarNotification new];
     
-    [_notification displayNotificationWithMessage:[[userInfo objectForKey:@"title"]stringByAppendingString:@" 💨"] completion:nil];
+    [_notification displayNotificationWithMessage:[[userInfo objectForKey:@"title"]stringByAppendingString:@" 💨"]
+                                       completion:nil];
+    
     _notification.notificationStyle = CWNotificationStyleStatusBarNotification;
 
     _notification.notificationAnimationInStyle = CWNotificationAnimationStyleTop;
@@ -149,11 +181,7 @@
     PushNotificationMaster *pushMaster = [PushNotificationMaster new];
     
     if ([identifier isEqualToString:@"REFART"]) {
-        //Refart
-        NSLog(@"%@",[userInfo description]);
-        
         NSString *userChannel = [userInfo objectForKey:@"senderId"];
-
         [pushMaster sendPushNotificationToUserChannel:userChannel];
     }
 

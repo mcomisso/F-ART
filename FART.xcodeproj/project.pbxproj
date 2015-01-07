@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49E4FC611A23B89900908EDA /* parseData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E4FC601A23B89900908EDA /* parseData.plist */; };
-		B45A25CDC583482799DADC2C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14F84AC36DF49ADAA85E773 /* libPods.a */; };
+		60C893ADD420A2901980DC00 /* libPods-FART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C324227DBC66BC9F675A3C /* libPods-FART.a */; };
 		B907E0321A140E10009713F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E0301A140E10009713F5 /* Fabric.framework */; };
 		B917D286196E0CDD008E418D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D285196E0CDD008E418D /* Foundation.framework */; };
 		B917D288196E0CDD008E418D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D287196E0CDD008E418D /* CoreGraphics.framework */; };
@@ -28,22 +28,20 @@
 		B917D2C9196E0DEF008E418D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2C8196E0DEF008E418D /* QuartzCore.framework */; };
 		B917D2CB196E0DFC008E418D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2CA196E0DFC008E418D /* Security.framework */; };
 		B917D2CF196E0E10008E418D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2CE196E0E10008E418D /* SystemConfiguration.framework */; };
-		B917D2D1196E0F05008E418D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2D0196E0F05008E418D /* FacebookSDK.framework */; };
 		B917D2D3196E0F4E008E418D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2D2196E0F4E008E418D /* Accounts.framework */; };
 		B917D2D5196E0F5A008E418D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2D4196E0F5A008E418D /* Social.framework */; };
 		B917D2DC196E7D43008E418D /* contactCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B917D2DB196E7D43008E418D /* contactCellTableViewCell.m */; };
 		B917D2E1196EE1D6008E418D /* userSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B917D2E0196EE1D6008E418D /* userSettingsViewController.m */; };
 		B954ADCD1978946700AB9877 /* contactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B954ADCC1978946700AB9877 /* contactsViewController.m */; };
-		B958E46C1A2FC11A00C4DA4E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958E4691A2FC11A00C4DA4E /* Parse.framework */; };
-		B958E46D1A2FC11A00C4DA4E /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958E46A1A2FC11A00C4DA4E /* ParseFacebookUtils.framework */; };
-		B958E46E1A2FC11A00C4DA4E /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958E46B1A2FC11A00C4DA4E /* ParseUI.framework */; };
-		B958E4701A2FC2E900C4DA4E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958E46F1A2FC2E900C4DA4E /* Crashlytics.framework */; };
 		B958E4731A2FC35B00C4DA4E /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958E4711A2FC35B00C4DA4E /* MoPub.framework */; };
 		B958E4741A2FC35B00C4DA4E /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B958E4721A2FC35B00C4DA4E /* MoPub.bundle */; };
 		B96ADA8D1A1D579A00E4E424 /* PushNotificationMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */; };
 		B96ADA901A1D74DF00E4E424 /* shareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */; };
 		B990A19E197DBB1600B276E9 /* feedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B990A19D197DBB1600B276E9 /* feedbackViewController.m */; };
 		B9DCAB031A099C13000940C7 /* fart.caf in Resources */ = {isa = PBXBuildFile; fileRef = B9DCAB021A099C13000940C7 /* fart.caf */; };
+		B9E295A81A3A49DD00EE2CA5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E295A71A3A49DD00EE2CA5 /* libsqlite3.dylib */; };
+		B9E295B01A3A4A5600EE2CA5 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E295AF1A3A4A5600EE2CA5 /* libstdc++.6.dylib */; };
+		B9E295B21A3A579900EE2CA5 /* fart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E295B11A3A579900EE2CA5 /* fart.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,9 +58,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		49E4FC581A23B5FC00908EDA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		49E4FC5B1A23B63200908EDA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		49E4FC601A23B89900908EDA /* parseData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parseData.plist; sourceTree = "<group>"; };
+		6200339B294EBFAD797B17C3 /* Pods-FART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FART/Pods-FART.debug.xcconfig"; sourceTree = "<group>"; };
 		B907E02F1A140E10009713F5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		B907E0301A140E10009713F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		B907E0331A140EAA009713F5 /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = SOURCE_ROOT; };
@@ -94,7 +92,6 @@
 		B917D2C8196E0DEF008E418D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B917D2CA196E0DFC008E418D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B917D2CE196E0E10008E418D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		B917D2D0196E0F05008E418D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		B917D2D2196E0F4E008E418D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B917D2D4196E0F5A008E418D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B917D2DA196E7D43008E418D /* contactCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactCellTableViewCell.h; sourceTree = "<group>"; };
@@ -103,10 +100,6 @@
 		B917D2E0196EE1D6008E418D /* userSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingsViewController.m; path = ../userSettingsViewController.m; sourceTree = "<group>"; };
 		B954ADCB1978946700AB9877 /* contactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactsViewController.h; sourceTree = "<group>"; };
 		B954ADCC1978946700AB9877 /* contactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactsViewController.m; sourceTree = "<group>"; };
-		B958E4691A2FC11A00C4DA4E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		B958E46A1A2FC11A00C4DA4E /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		B958E46B1A2FC11A00C4DA4E /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		B958E46F1A2FC2E900C4DA4E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		B958E4711A2FC35B00C4DA4E /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
 		B958E4721A2FC35B00C4DA4E /* MoPub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoPub.bundle; path = MoPub.framework/Versions/A/Resources/MoPub.bundle; sourceTree = "<group>"; };
 		B96ADA8B1A1D579A00E4E424 /* PushNotificationMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotificationMaster.h; sourceTree = "<group>"; };
@@ -117,8 +110,15 @@
 		B990A19C197DBB1600B276E9 /* feedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackViewController.h; sourceTree = "<group>"; };
 		B990A19D197DBB1600B276E9 /* feedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackViewController.m; sourceTree = "<group>"; };
 		B9DCAB021A099C13000940C7 /* fart.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fart.caf; sourceTree = "<group>"; };
+		B9E295A71A3A49DD00EE2CA5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B9E295A91A3A4A1900EE2CA5 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		B9E295AB1A3A4A2D00EE2CA5 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		B9E295AD1A3A4A3600EE2CA5 /* libc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libc.dylib; path = usr/lib/libc.dylib; sourceTree = SDKROOT; };
+		B9E295AF1A3A4A5600EE2CA5 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		B9E295B11A3A579900EE2CA5 /* fart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fart.mp3; sourceTree = "<group>"; };
 		BCEF75A05186E1500F1FD2BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F14F84AC36DF49ADAA85E773 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5C3EF802C8BC04DA977A937 /* Pods-FART.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FART.release.xcconfig"; path = "Pods/Target Support Files/Pods-FART/Pods-FART.release.xcconfig"; sourceTree = "<group>"; };
+		E9C324227DBC66BC9F675A3C /* libPods-FART.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FART.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9184A72024C69722A51802 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,10 +127,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B958E46E1A2FC11A00C4DA4E /* ParseUI.framework in Frameworks */,
+				B9E295B01A3A4A5600EE2CA5 /* libstdc++.6.dylib in Frameworks */,
+				B9E295A81A3A49DD00EE2CA5 /* libsqlite3.dylib in Frameworks */,
 				B917D2D5196E0F5A008E418D /* Social.framework in Frameworks */,
 				B917D2D3196E0F4E008E418D /* Accounts.framework in Frameworks */,
-				B917D2D1196E0F05008E418D /* FacebookSDK.framework in Frameworks */,
 				B907E0321A140E10009713F5 /* Fabric.framework in Frameworks */,
 				B917D2CF196E0E10008E418D /* SystemConfiguration.framework in Frameworks */,
 				B917D2CB196E0DFC008E418D /* Security.framework in Frameworks */,
@@ -141,14 +141,11 @@
 				B917D2C3196E0DCC008E418D /* CFNetwork.framework in Frameworks */,
 				B917D2C1196E0DC6008E418D /* AudioToolbox.framework in Frameworks */,
 				B917D2BD196E0CF0008E418D /* CoreBluetooth.framework in Frameworks */,
-				B958E4701A2FC2E900C4DA4E /* Crashlytics.framework in Frameworks */,
 				B917D2BB196E0CE9008E418D /* CoreLocation.framework in Frameworks */,
 				B917D288196E0CDD008E418D /* CoreGraphics.framework in Frameworks */,
-				B958E46D1A2FC11A00C4DA4E /* ParseFacebookUtils.framework in Frameworks */,
-				B958E46C1A2FC11A00C4DA4E /* Parse.framework in Frameworks */,
 				B917D28A196E0CDD008E418D /* UIKit.framework in Frameworks */,
 				B917D286196E0CDD008E418D /* Foundation.framework in Frameworks */,
-				B45A25CDC583482799DADC2C /* libPods.a in Frameworks */,
+				60C893ADD420A2901980DC00 /* libPods-FART.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +157,8 @@
 			children = (
 				FE9184A72024C69722A51802 /* Pods.debug.xcconfig */,
 				BCEF75A05186E1500F1FD2BD /* Pods.release.xcconfig */,
+				6200339B294EBFAD797B17C3 /* Pods-FART.debug.xcconfig */,
+				C5C3EF802C8BC04DA977A937 /* Pods-FART.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -186,17 +185,16 @@
 		B917D284196E0CDD008E418D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9E295AF1A3A4A5600EE2CA5 /* libstdc++.6.dylib */,
+				B9E295AD1A3A4A3600EE2CA5 /* libc.dylib */,
+				B9E295AB1A3A4A2D00EE2CA5 /* libc++.dylib */,
+				B9E295A91A3A4A1900EE2CA5 /* libstdc++.dylib */,
+				B9E295A71A3A49DD00EE2CA5 /* libsqlite3.dylib */,
 				B958E4711A2FC35B00C4DA4E /* MoPub.framework */,
 				B958E4721A2FC35B00C4DA4E /* MoPub.bundle */,
-				B958E46F1A2FC2E900C4DA4E /* Crashlytics.framework */,
-				B958E4691A2FC11A00C4DA4E /* Parse.framework */,
-				B958E46A1A2FC11A00C4DA4E /* ParseFacebookUtils.framework */,
-				B958E46B1A2FC11A00C4DA4E /* ParseUI.framework */,
 				49E4FC5B1A23B63200908EDA /* Fabric.framework */,
-				49E4FC581A23B5FC00908EDA /* FacebookSDK.framework */,
 				B917D2D4196E0F5A008E418D /* Social.framework */,
 				B917D2D2196E0F4E008E418D /* Accounts.framework */,
-				B917D2D0196E0F05008E418D /* FacebookSDK.framework */,
 				B917D2CE196E0E10008E418D /* SystemConfiguration.framework */,
 				B917D2CA196E0DFC008E418D /* Security.framework */,
 				B917D2C8196E0DEF008E418D /* QuartzCore.framework */,
@@ -210,7 +208,7 @@
 				B917D287196E0CDD008E418D /* CoreGraphics.framework */,
 				B917D289196E0CDD008E418D /* UIKit.framework */,
 				B917D2A4196E0CDD008E418D /* XCTest.framework */,
-				F14F84AC36DF49ADAA85E773 /* libPods.a */,
+				E9C324227DBC66BC9F675A3C /* libPods-FART.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,8 +223,9 @@
 				B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */,
 				B917D297196E0CDD008E418D /* Main.storyboard */,
 				B9DCAB021A099C13000940C7 /* fart.caf */,
+				B9E295B11A3A579900EE2CA5 /* fart.mp3 */,
 				B917D2E2196EE1E2008E418D /* User Settings */,
-				B917D2D9196E7D22008E418D /* Contacts View */,
+				B917D2D9196E7D22008E418D /* Contacts View (Main page) */,
 				B990A19F197DBB1A00B276E9 /* Feedback */,
 				B917D29A196E0CDD008E418D /* ViewController.h */,
 				B917D29B196E0CDD008E418D /* ViewController.m */,
@@ -270,7 +269,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B917D2D9196E7D22008E418D /* Contacts View */ = {
+		B917D2D9196E7D22008E418D /* Contacts View (Main page) */ = {
 			isa = PBXGroup;
 			children = (
 				B954ADCB1978946700AB9877 /* contactsViewController.h */,
@@ -280,7 +279,7 @@
 				B96ADA8E1A1D74DF00E4E424 /* shareTableViewCell.h */,
 				B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */,
 			);
-			name = "Contacts View";
+			name = "Contacts View (Main page)";
 			sourceTree = "<group>";
 		};
 		B917D2E2196EE1E2008E418D /* User Settings */ = {
@@ -375,6 +374,7 @@
 				49E4FC611A23B89900908EDA /* parseData.plist in Resources */,
 				B958E4741A2FC35B00C4DA4E /* MoPub.bundle in Resources */,
 				B9DCAB031A099C13000940C7 /* fart.caf in Resources */,
+				B9E295B21A3A579900EE2CA5 /* fart.mp3 in Resources */,
 				B917D299196E0CDD008E418D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FART/Pods-FART-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6C2A2DD9FFB74D5FAD415AC2 /* Check Pods Manifest.lock */ = {
@@ -476,6 +476,7 @@
 /* Begin XCBuildConfiguration section */
 		B917D2B2196E0CDD008E418D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6200339B294EBFAD797B17C3 /* Pods-FART.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -508,6 +509,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+					"$(inherited)",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
 				SDKROOT = iphoneos;
@@ -516,6 +521,7 @@
 		};
 		B917D2B3196E0CDD008E418D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C3EF802C8BC04DA977A937 /* Pods-FART.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -542,6 +548,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+					"$(inherited)",
+				);
 				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -550,11 +560,12 @@
 		};
 		B917D2B5196E0CDD008E418D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE9184A72024C69722A51802 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6200339B294EBFAD797B17C3 /* Pods-FART.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matteo Comisso (S7YH5DL2AY)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -563,20 +574,23 @@
 				GCC_PREFIX_HEADER = "H-ound/FART-Prefix.pch";
 				INFOPLIST_FILE = "H-ound/FART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = NO;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FART;
-				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		B917D2B6196E0CDD008E418D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCEF75A05186E1500F1FD2BD /* Pods.release.xcconfig */;
+			baseConfigurationReference = C5C3EF802C8BC04DA977A937 /* Pods-FART.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matteo Comisso (S7YH5DL2AY)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -585,8 +599,11 @@
 				GCC_PREFIX_HEADER = "H-ound/FART-Prefix.pch";
 				INFOPLIST_FILE = "H-ound/FART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FART;
-				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -14,5 +14,6 @@
  Send a push notification to the selected target
  */
 -(void)sendPushNotificationToUserChannel:(NSString *)userChannel;
+-(void)sendPushNotificationViaCloudCode:(NSString *)userTarget;
 
 @end

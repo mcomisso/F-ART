@@ -23,30 +23,39 @@
 @property (nonatomic, strong) NSMutableArray *contacts;
 @property (nonatomic, strong) NSMutableArray *contactsImages;
 
+@property (nonatomic, strong) NSArray *availableColours;
+
 @end
 
 @implementation contactsViewController
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     
     // TODO: Replace this test id with your personal ad unit id
     MPAdView* adView = [[MPAdView alloc] initWithAdUnitId:@"0fd404de447942edb7610228cb412614"
                                                      size:MOPUB_BANNER_SIZE];
     self.adView = adView;
     self.adView.delegate = self;
-    self.adView.frame = CGRectMake(0, self.view.bounds.size.height - MOPUB_BANNER_SIZE.height,
+    self.adView.frame = CGRectMake(0, self.view.frame.size.height - MOPUB_BANNER_SIZE.height,
                                    MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
     [self.view addSubview:self.adView];
     [self.adView loadAd];
 
-    [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = FlatSkyBlueDark;
+    self.navigationController.navigationBar.tintColor = FlatWhite;
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:FlatWhite}];
+
+    [[UIApplication sharedApplication]setStatusBarStyle:StatusBarContrastColorOf(FlatSkyBlueDark) animated:YES];
+    
+    _availableColours = ColorScheme(ColorSchemeComplementary, FlatSkyBlueDark, YES);
 
     self.navigationController.navigationBarHidden = NO;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    self.tableView.backgroundColor = [UIColor flatOrangeColor];
+    self.tableView.backgroundColor = FlatSkyBlue;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -80,6 +89,7 @@
             for (NSDictionary *friendObject in friendsObject) {
                 [friendsIds addObject:[friendObject objectForKey:@"id"]];
             }
+            
             PFQuery *searchAllContacts = [PFUser query];
             searchAllContacts.cachePolicy = kPFCachePolicyNetworkElseCache;
             [searchAllContacts whereKey:@"facebookId" containedIn:friendsIds];
@@ -112,6 +122,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)picturesDownloader
+{
+    
+}
+
 #pragma mark - Table view delegates methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -128,12 +143,28 @@
     return _contacts.count + 1;
 }
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell isKindOfClass:[contactCellTableViewCell class]]) {
+        
+        int selector = arc4random() % [_availableColours count];
+        
+        contactCellTableViewCell *contactCell = (contactCellTableViewCell *) cell;
+        contactCell.contentView.backgroundColor = _availableColours[selector];
+        
+        contactCell.contactName.textColor = ContrastColorOf(contactCell.contentView.backgroundColor, YES);
+        contactCell.contactLastName.textColor = ContrastColorOf(contactCell.contentView.backgroundColor, YES);
+    }
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == _contacts.count) {
         static NSString *shareCellIdentifier = @"shareCellIdenfifier";
         shareTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:shareCellIdentifier];
+        
+        cell.contentView.backgroundColor = ClearColor;
+        cell.backgroundColor = ClearColor;
         
         if (cell == nil) {
             cell = [[shareTableViewCell alloc]initWithFrame:CGRectZero];
@@ -160,9 +191,10 @@
         }
         
         //Set the content of every cell
-        cell.backgroundColor = [UIColor flatPomegranateColor];
-        cell.contactName.text = [[_contacts objectAtIndex:indexPath.row] objectForKey:@"name"];
+    
+        cell.contactName.text = [[[_contacts objectAtIndex:indexPath.row] objectForKey:@"name"] uppercaseString];
         cell.contactLastName.text = [[_contacts objectAtIndex:indexPath.row] objectForKey:@"surname"];
+
         cell.contactImage.layer.cornerRadius = 10.f;
         cell.contactImage.layer.masksToBounds = YES;
         
@@ -187,7 +219,6 @@
          }];
         
         return cell;
-        
     }
 }
 

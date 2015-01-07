@@ -19,6 +19,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        if (![[PFUser currentUser]objectForKey:@"counters"]) {
+            
+        }
+        
     }
     return self;
 }

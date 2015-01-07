@@ -60,7 +60,6 @@
                                         @"message": @" 💨",
                                         @"category":@"actionable",
                                         @"sound":@"fart.caf",
-                                        @"title":[[PFUser currentUser]objectForKey:@"name"],
                                         @"senderId":[[NSString stringWithFormat:@"ch"]stringByAppendingString:[[PFUser currentUser] objectForKey:@"username"]]}
                                 block:^(id object, NSError *error) {
         if (!error) {
