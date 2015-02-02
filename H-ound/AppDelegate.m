@@ -36,7 +36,6 @@
     NSMutableDictionary *parseData = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
 
     //Parse Initialization
-    [ParseCrashReporting enable];
     [Parse setApplicationId:[parseData objectForKey:@"applicationId"]
                   clientKey:[parseData objectForKey:@"clientKey"]];
     
@@ -67,15 +66,6 @@
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:[NSSet setWithObject:category]]];
         
         [application registerForRemoteNotifications];
-    }
-    
-    
-    //-- Set Notification
-    if (![application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
-    {
-        // iOS < 8 Notifications
-        [application registerForRemoteNotificationTypes:
-         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
     }
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
