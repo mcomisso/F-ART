@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49E4FC611A23B89900908EDA /* parseData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E4FC601A23B89900908EDA /* parseData.plist */; };
-		60C893ADD420A2901980DC00 /* libPods-FART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C324227DBC66BC9F675A3C /* libPods-FART.a */; };
+		966A8312A11A565211AC3F14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE167145EC4CDA49F2E14EE /* libPods.a */; };
 		B907E0321A140E10009713F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E0301A140E10009713F5 /* Fabric.framework */; };
 		B917D286196E0CDD008E418D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D285196E0CDD008E418D /* Foundation.framework */; };
 		B917D288196E0CDD008E418D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D287196E0CDD008E418D /* CoreGraphics.framework */; };
@@ -38,6 +38,8 @@
 		B96ADA8D1A1D579A00E4E424 /* PushNotificationMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */; };
 		B96ADA901A1D74DF00E4E424 /* shareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */; };
 		B990A19E197DBB1600B276E9 /* feedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B990A19D197DBB1600B276E9 /* feedbackViewController.m */; };
+		B99BFB361A7EE33500538FEA /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B99BFB351A7EE33500538FEA /* MainTabBarController.m */; };
+		B99BFB391A7EE89C00538FEA /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99BFB381A7EE89C00538FEA /* Launch Screen.xib */; };
 		B9DCAB031A099C13000940C7 /* fart.caf in Resources */ = {isa = PBXBuildFile; fileRef = B9DCAB021A099C13000940C7 /* fart.caf */; };
 		B9E295A81A3A49DD00EE2CA5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E295A71A3A49DD00EE2CA5 /* libsqlite3.dylib */; };
 		B9E295B01A3A4A5600EE2CA5 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E295AF1A3A4A5600EE2CA5 /* libstdc++.6.dylib */; };
@@ -58,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0AE167145EC4CDA49F2E14EE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4FC5B1A23B63200908EDA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		49E4FC601A23B89900908EDA /* parseData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parseData.plist; sourceTree = "<group>"; };
 		6200339B294EBFAD797B17C3 /* Pods-FART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FART/Pods-FART.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +112,9 @@
 		B96ADA921A1E0E5100E4E424 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		B990A19C197DBB1600B276E9 /* feedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackViewController.h; sourceTree = "<group>"; };
 		B990A19D197DBB1600B276E9 /* feedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackViewController.m; sourceTree = "<group>"; };
+		B99BFB341A7EE33500538FEA /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		B99BFB351A7EE33500538FEA /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		B99BFB381A7EE89C00538FEA /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		B9DCAB021A099C13000940C7 /* fart.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fart.caf; sourceTree = "<group>"; };
 		B9E295A71A3A49DD00EE2CA5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B9E295A91A3A4A1900EE2CA5 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -116,6 +122,8 @@
 		B9E295AD1A3A4A3600EE2CA5 /* libc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libc.dylib; path = usr/lib/libc.dylib; sourceTree = SDKROOT; };
 		B9E295AF1A3A4A5600EE2CA5 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		B9E295B11A3A579900EE2CA5 /* fart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fart.mp3; sourceTree = "<group>"; };
+		B9F9EB1D1A5EFD4A006DE682 /* FART.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FART.entitlements; sourceTree = "<group>"; };
+		B9F9EB231A5F0428006DE682 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		BCEF75A05186E1500F1FD2BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C5C3EF802C8BC04DA977A937 /* Pods-FART.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FART.release.xcconfig"; path = "Pods/Target Support Files/Pods-FART/Pods-FART.release.xcconfig"; sourceTree = "<group>"; };
 		E9C324227DBC66BC9F675A3C /* libPods-FART.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FART.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +153,7 @@
 				B917D288196E0CDD008E418D /* CoreGraphics.framework in Frameworks */,
 				B917D28A196E0CDD008E418D /* UIKit.framework in Frameworks */,
 				B917D286196E0CDD008E418D /* Foundation.framework in Frameworks */,
-				60C893ADD420A2901980DC00 /* libPods-FART.a in Frameworks */,
+				966A8312A11A565211AC3F14 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +174,7 @@
 		B917D279196E0CDD008E418D = {
 			isa = PBXGroup;
 			children = (
+				B9F9EB1D1A5EFD4A006DE682 /* FART.entitlements */,
 				B917D28B196E0CDD008E418D /* H-ound */,
 				B917D2AA196E0CDD008E418D /* H-oundTests */,
 				B917D284196E0CDD008E418D /* Frameworks */,
@@ -209,6 +218,8 @@
 				B917D289196E0CDD008E418D /* UIKit.framework */,
 				B917D2A4196E0CDD008E418D /* XCTest.framework */,
 				E9C324227DBC66BC9F675A3C /* libPods-FART.a */,
+				B9F9EB231A5F0428006DE682 /* NotificationCenter.framework */,
+				0AE167145EC4CDA49F2E14EE /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,15 +227,16 @@
 		B917D28B196E0CDD008E418D /* H-ound */ = {
 			isa = PBXGroup;
 			children = (
+				B99BFB381A7EE89C00538FEA /* Launch Screen.xib */,
+				B917D297196E0CDD008E418D /* Main.storyboard */,
 				B96ADA921A1E0E5100E4E424 /* Constants.h */,
 				B917D294196E0CDD008E418D /* AppDelegate.h */,
 				B917D295196E0CDD008E418D /* AppDelegate.m */,
-				B96ADA8B1A1D579A00E4E424 /* PushNotificationMaster.h */,
-				B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */,
-				B917D297196E0CDD008E418D /* Main.storyboard */,
+				B99BFB3A1A7EE96400538FEA /* Utils */,
 				B9DCAB021A099C13000940C7 /* fart.caf */,
 				B9E295B11A3A579900EE2CA5 /* fart.mp3 */,
-				B917D2E2196EE1E2008E418D /* User Settings */,
+				B99BFB371A7EE33900538FEA /* TabBar */,
+				B917D2E2196EE1E2008E418D /* User Profile */,
 				B917D2D9196E7D22008E418D /* Contacts View (Main page) */,
 				B990A19F197DBB1A00B276E9 /* Feedback */,
 				B917D29A196E0CDD008E418D /* ViewController.h */,
@@ -282,13 +294,13 @@
 			name = "Contacts View (Main page)";
 			sourceTree = "<group>";
 		};
-		B917D2E2196EE1E2008E418D /* User Settings */ = {
+		B917D2E2196EE1E2008E418D /* User Profile */ = {
 			isa = PBXGroup;
 			children = (
 				B917D2DF196EE1D6008E418D /* userSettingsViewController.h */,
 				B917D2E0196EE1D6008E418D /* userSettingsViewController.m */,
 			);
-			name = "User Settings";
+			name = "User Profile";
 			sourceTree = "<group>";
 		};
 		B990A19F197DBB1A00B276E9 /* Feedback */ = {
@@ -298,6 +310,24 @@
 				B990A19D197DBB1600B276E9 /* feedbackViewController.m */,
 			);
 			name = Feedback;
+			sourceTree = "<group>";
+		};
+		B99BFB371A7EE33900538FEA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B99BFB341A7EE33500538FEA /* MainTabBarController.h */,
+				B99BFB351A7EE33500538FEA /* MainTabBarController.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		B99BFB3A1A7EE96400538FEA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B96ADA8B1A1D579A00E4E424 /* PushNotificationMaster.h */,
+				B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,12 +360,15 @@
 		B917D27A196E0CDD008E418D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Blue-Mate";
 				TargetAttributes = {
 					B917D281196E0CDD008E418D = {
 						DevelopmentTeam = B82WJF6RBY;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -374,6 +407,7 @@
 				49E4FC611A23B89900908EDA /* parseData.plist in Resources */,
 				B958E4741A2FC35B00C4DA4E /* MoPub.bundle in Resources */,
 				B9DCAB031A099C13000940C7 /* fart.caf in Resources */,
+				B99BFB391A7EE89C00538FEA /* Launch Screen.xib in Resources */,
 				B9E295B21A3A579900EE2CA5 /* fart.mp3 in Resources */,
 				B917D299196E0CDD008E418D /* Main.storyboard in Resources */,
 			);
@@ -394,7 +428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FART/Pods-FART-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6C2A2DD9FFB74D5FAD415AC2 /* Check Pods Manifest.lock */ = {
@@ -438,6 +472,7 @@
 				B954ADCD1978946700AB9877 /* contactsViewController.m in Sources */,
 				B917D296196E0CDD008E418D /* AppDelegate.m in Sources */,
 				B990A19E197DBB1600B276E9 /* feedbackViewController.m in Sources */,
+				B99BFB361A7EE33500538FEA /* MainTabBarController.m in Sources */,
 				B96ADA8D1A1D579A00E4E424 /* PushNotificationMaster.m in Sources */,
 				B96ADA901A1D74DF00E4E424 /* shareTableViewCell.m in Sources */,
 				B917D292196E0CDD008E418D /* main.m in Sources */,
@@ -476,7 +511,7 @@
 /* Begin XCBuildConfiguration section */
 		B917D2B2196E0CDD008E418D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6200339B294EBFAD797B17C3 /* Pods-FART.debug.xcconfig */;
+			baseConfigurationReference = FE9184A72024C69722A51802 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -508,20 +543,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 					"$(inherited)",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		B917D2B3196E0CDD008E418D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5C3EF802C8BC04DA977A937 /* Pods-FART.release.xcconfig */;
+			baseConfigurationReference = BCEF75A05186E1500F1FD2BD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -547,12 +582,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 					"$(inherited)",
 				);
-				PROVISIONING_PROFILE = "312773fc-635c-48af-b240-bb34afc87b16";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -560,12 +595,14 @@
 		};
 		B917D2B5196E0CDD008E418D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6200339B294EBFAD797B17C3 /* Pods-FART.debug.xcconfig */;
+			baseConfigurationReference = FE9184A72024C69722A51802 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FART.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -573,24 +610,27 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "H-ound/FART-Prefix.pch";
 				INFOPLIST_FILE = "H-ound/FART-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = FART;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		B917D2B6196E0CDD008E418D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5C3EF802C8BC04DA977A937 /* Pods-FART.release.xcconfig */;
+			baseConfigurationReference = BCEF75A05186E1500F1FD2BD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FART.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -598,12 +638,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "H-ound/FART-Prefix.pch";
 				INFOPLIST_FILE = "H-ound/FART-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = FART;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

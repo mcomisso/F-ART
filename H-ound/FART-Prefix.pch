@@ -20,6 +20,5 @@
 #import <UIColor+FlatColors/UIColor+FlatColors.h>
 #import "ChameleonFramework/Chameleon.h"
 #import "Constants.h"
-#import <ParseCrashReporting/ParseCrashReporting.h>
 
 #endif

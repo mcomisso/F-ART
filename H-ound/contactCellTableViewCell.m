@@ -32,12 +32,31 @@
     // Configure the view for the selected state
 
     if (selected) {
+        [self scaleToSmallAndDefault];
+    }
+}
+
+-(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:animated];
+    
+    if(highlighted) {
         [self scaleToSmall];
+    } else {
+        [self scaleToDefault];
     }
 }
 
 #pragma mark - scale animations
 - (void)scaleToSmall
+{
+    POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(0.95f, 0.95f)];
+    [self.layer pop_addAnimation:scaleAnimation forKey:@"layerScaleSmallAnimation"];
+}
+
+
+- (void)scaleToSmallAndDefault
 {
     POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
     scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(0.95f, 0.95f)];
@@ -60,6 +79,5 @@
     scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.f, 1.f)];
     [self.layer pop_addAnimation:scaleAnimation forKey:@"layerScaleDefaultAnimation"];
 }
-
 
 @end

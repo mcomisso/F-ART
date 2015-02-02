@@ -45,6 +45,8 @@
             
             [statusBarNotification displayNotificationWithMessage:fartMessage[selector]
                                                   forDuration:1.5f];
+            
+            [self increaseCounterOfSentFarts];
         }
         else
         {
@@ -67,6 +69,14 @@
             // CWStatusBarNotification *statusBarNotification = [CWStatusBarNotification new];
         }
     }];
+}
+
+#pragma mark - self user defaults
+-(void)increaseCounterOfSentFarts
+{
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc]initWithSuiteName:@"group.com.matcom.fartdefaults"];
+    NSInteger actualCounter = [sharedDefaults integerForKey:@""];
+    NSLog(@"%ld", (long)actualCounter);
 }
 
 @end

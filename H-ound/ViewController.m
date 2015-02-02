@@ -19,11 +19,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    if ([PFUser currentUser]) {
-        NSLog(@"[Login View Controller] Welcome back %@", [[PFUser currentUser] objectForKey:@"name"]);
-        [self performSegueWithIdentifier:@"loginComplete" sender:self];
-    }
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -81,7 +81,7 @@
         {
             NSLog(@"[Login View Controller] Welcome back %@", user[@"name"]);
             [self setupInstallationToParse];
-            [self performSegueWithIdentifier:@"loginComplete" sender:self];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];
     
@@ -98,7 +98,7 @@
     [currentInstallation addUniqueObject:@"all" forKey:@"channels"];
     [currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
-            [self performSegueWithIdentifier:@"loginComplete" sender:self];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         else
         {

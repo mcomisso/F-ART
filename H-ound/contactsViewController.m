@@ -16,7 +16,7 @@
 #import "PushNotificationMaster.h"
 
 
-@interface contactsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface contactsViewController () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -25,6 +25,7 @@
 
 @property (nonatomic, strong) NSArray *availableColours;
 
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation contactsViewController
@@ -62,7 +63,27 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    // Attach long press gesture recogniz
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 1.5;
+    lpgr.delegate = self;
+    [self.tableView addGestureRecognizer:lpgr];
+    
+    _refreshControl = [[UIRefreshControl alloc]init];
+    _refreshControl.tintColor = FlatWhite;
+    [self.tableView addSubview:_refreshControl];
+    [_refreshControl addTarget:self action:@selector(refreshTableButton:) forControlEvents:UIControlEventValueChanged];
+    
+    //Request facebook friends
     [self requestMyFacebookFriends];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([PFUser currentUser] == nil) {
+        [self performSegueWithIdentifier:@"registerSegue" sender:self];
+    }
 }
 
 #pragma mark - <MPAdViewDelegate>
@@ -76,7 +97,7 @@
     //TODO: cache images of contacts ¿@{ID:photoid}?
 }
 
-- (IBAction)refreshTableButton:(id)sender {
+- (void)refreshTableButton:(id)sender {
     [self requestMyFacebookFriends];
 }
 
@@ -100,6 +121,7 @@
                     _contacts = [NSMutableArray arrayWithArray:objects];
                     [self loadImagesOfContacts];
                     
+                    [self.refreshControl endRefreshing];
                     [self.tableView reloadData];
                 }
                 else
@@ -262,6 +284,32 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+-(void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == _contacts.count)
+    {
+        NSLog(@"Can't do anything here");
+    } else {
+        
+    }
+}
+
+/**
+ Long press
+ */
+-(void)handleLongPress:(UILongPressGestureRecognizer *)longPressGesture
+{
+    CGPoint p = [longPressGesture locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:p];
+    
+    if (indexPath == nil) {
+        NSLog(@"Pressed outside the rows");
+    } else if(longPressGesture.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"Indexpath pressed = %@", [indexPath description]);
+    } else {
+        NSLog(@"Gesture recognizer state: %ld", longPressGesture.state);
+    }
+}
 
 /*
  // Override to support conditional editing of the table view.
