@@ -109,7 +109,10 @@
             NSMutableArray *friendsIds = [NSMutableArray arrayWithCapacity:friendsObject.count];
             for (NSDictionary *friendObject in friendsObject) {
                 [friendsIds addObject:[friendObject objectForKey:@"id"]];
+                [[PFUser currentUser]addUniqueObject:[friendObject objectForKey:@"id"] forKey:@"facebookFriends"];
             }
+            
+            [[PFUser currentUser]saveEventually];
             
             PFQuery *searchAllContacts = [PFUser query];
             searchAllContacts.cachePolicy = kPFCachePolicyNetworkElseCache;
