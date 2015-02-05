@@ -172,7 +172,7 @@
     
     if ([identifier isEqualToString:@"REFART"]) {
         NSString *userChannel = [userInfo objectForKey:@"senderId"];
-        [pushMaster sendPushNotificationToUserChannel:userChannel];
+        [pushMaster sendPushNotificationViaCloudCode:userChannel];
     }
 
     completionHandler();

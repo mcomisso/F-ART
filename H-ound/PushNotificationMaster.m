@@ -58,15 +58,23 @@
 -(void)sendPushNotificationViaCloudCode:(NSString *)userTarget
 {
     [PFCloud callFunctionInBackground:@"sendPushToUser"
-                       withParameters:@{@"recipiendId":userTarget,
-                                        @"message": @" 💨",
-                                        @"category":@"actionable",
-                                        @"sound":@"fart.caf",
-                                        @"senderId":[[NSString stringWithFormat:@"ch"]stringByAppendingString:[[PFUser currentUser] objectForKey:@"username"]]}
+                       withParameters:@{@"targetID":userTarget}
                                 block:^(id object, NSError *error) {
         if (!error) {
             // Push was successfully sent
-            // CWStatusBarNotification *statusBarNotification = [CWStatusBarNotification new];
+            NSArray *fartMessage = @[@"PROOOOT",
+                                     @"Farted Sent!",
+                                     @"Wow, that was huge.",
+                                     @"You farted your friend"];
+            
+            int selector = arc4random() % [fartMessage count];
+            
+            NSLog(@"Push notification sent!");
+            CWStatusBarNotification *statusBarNotification = [CWStatusBarNotification new];
+            
+            [statusBarNotification displayNotificationWithMessage:fartMessage[selector]
+                                                      forDuration:1.5f];
+            
         }
     }];
 }

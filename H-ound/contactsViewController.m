@@ -281,7 +281,8 @@
         //Userchannel = "ch" + username
         NSString *userChannel = [@"ch" stringByAppendingString:[touchedUser objectForKey:@"username"]];
         
-        [pushMaster sendPushNotificationToUserChannel:userChannel];
+//        [pushMaster sendPushNotificationToUserChannel:userChannel];
+        [pushMaster sendPushNotificationViaCloudCode:userChannel];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
