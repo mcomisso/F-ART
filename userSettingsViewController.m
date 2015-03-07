@@ -13,14 +13,13 @@
 #import "ViewController.h"
 
 #import <NGAParallaxMotion/NGAParallaxMotion.h>
-#import <GKBarGraph.h>
-@interface userSettingsViewController () <GKBarGraphDataSource>
+#import <GKLineGraph.h>
+@interface userSettingsViewController () <GKLineGraphDataSource>
 
 @property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (strong, nonatomic) IBOutlet UILabel *profileName;
 @property (strong, nonatomic) IBOutlet UILabel *profileSurname;
-@property (weak, nonatomic) IBOutlet GKBarGraph *barGraph;
-
+@property (weak, nonatomic) IBOutlet GKLineGraph *barGraph;
 
 @end
 
@@ -130,26 +129,36 @@
 }
 
 #pragma mark - BarGraphView
--(NSInteger)numberOfBars{
-    return 7;
+
+-(NSInteger)numberOfLines
+{
+    return 2;
 }
 
--(NSNumber *)valueForBarAtIndex:(NSInteger)index {
-    return @2;
+-(UIColor *)colorForLineAtIndex:(NSInteger)index
+{
+    if ((index % 2) == 0) {
+        return FlatWatermelonDark;
+    }
+    else {
+        return FlatYellowDark;
+    }
 }
 
--(UIColor *)colorForBarAtIndex:(NSInteger)index {
-    return FlatSkyBlue;
+-(NSArray *)valuesForLineAtIndex:(NSInteger)index
+{
+    
+    NSArray *data = @[
+  @[@20, @40, @20, @60, @40, @140, @80],
+  @[@40, @20, @60, @100, @60, @20, @60],
+  @[@80, @60, @40, @160, @100, @40, @110],
+  @[@120, @150, @80, @120, @140, @100, @0],
+  ];
+    NSArray *labels = @[@"2001", @"2002", @"2003", @"2004", @"2005", @"2006", @"2007"];
+
+    return data;
 }
 
--(UIColor *)colorForBarBackgroundAtIndex:(NSInteger)index {
-    return FlatSand;
-}
-
--(NSString *)titleForBarAtIndex:(NSInteger)index {
-
-    return @"lol";
-}
 
 /*
 #pragma mark - Navigation
