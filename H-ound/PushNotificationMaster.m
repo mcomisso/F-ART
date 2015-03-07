@@ -69,12 +69,14 @@
             
             int selector = arc4random() % [fartMessage count];
             
-            NSLog(@"Push notification sent!");
+            DLog(@"Push notification sent!");
             CWStatusBarNotification *statusBarNotification = [CWStatusBarNotification new];
             
             [statusBarNotification displayNotificationWithMessage:fartMessage[selector]
                                                       forDuration:1.5f];
             
+        } else {
+            DLog(@"Error with %@ | %@", [error localizedDescription], [error localizedFailureReason]);
         }
     }];
 }
@@ -84,7 +86,7 @@
 {
     NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc]initWithSuiteName:@"group.com.matcom.fartdefaults"];
     NSInteger actualCounter = [sharedDefaults integerForKey:@""];
-    NSLog(@"%ld", (long)actualCounter);
+    DLog(@"%ld", (long)actualCounter);
 }
 
 @end

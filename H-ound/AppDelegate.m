@@ -45,7 +45,7 @@
         }
         else
         {
-            NSLog(@"%@ - %@", error.localizedDescription, error.localizedFailureReason);
+            DLog(@"%@ - %@", error.localizedDescription, error.localizedFailureReason);
         }
     }];
     
@@ -132,7 +132,7 @@
                     error:&error];
     if (error)
     {
-        NSLog(@"Error in audioPlayer: %@",
+        DLog(@"Error in audioPlayer: %@",
               [error localizedDescription]);
     } else {
         _audioPlayer.delegate = self;

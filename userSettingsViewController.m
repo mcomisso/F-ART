@@ -77,7 +77,7 @@
          }
          else
          {
-             NSLog(@"userSettings: %@, %@", [error localizedDescription], [error localizedFailureReason]);
+             DLog(@"userSettings: %@, %@", [error localizedDescription], [error localizedFailureReason]);
          }
      }];
     
@@ -101,7 +101,7 @@
     
     endOfWeek = [startOfTheWeek dateByAddingTimeInterval:interval-1];
     
-    NSLog(@"Description %@", [cal description] );
+    DLog(@"Description %@", [cal description] );
     
     
 }

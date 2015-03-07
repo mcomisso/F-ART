@@ -41,21 +41,21 @@
     NSArray *permissionsArray = @[ @"user_about_me", @"user_location", @"user_friends"];
     
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-        //NSLog(@"%@", [user description]);
+        //DLog(@"%@", [user description]);
         if (!user) {
             if (!error) {
-                NSLog(@"[Facebook utils] The user cancelled the Facebook login.");
+                DLog(@"[Facebook utils] The user cancelled the Facebook login.");
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:@"Uh oh. The user cancelled the Facebook login." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                 [alert show];
             } else {
-                NSLog(@"[Facebook utils] An error occurred: %@", error);
+                DLog(@"[Facebook utils] An error occurred: %@", error);
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:[error description] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                 [alert show];
             }
         }
         else if (user.isNew)
         {
-            NSLog(@"user Signed up and logged through facebook");
+            DLog(@"user Signed up and logged through facebook");
             
             [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                 if (!error) {
@@ -66,20 +66,20 @@
                     user.email = [result objectForKey:@"email"];
                     [user saveInBackground];
                     
-                    NSLog(@"Signup user description: %@", [user description]);
+                    DLog(@"Signup user description: %@", [user description]);
                     
                     [self setupInstallationToParse];
                 }
                 else
                 {
                     //Error
-                    NSLog(@"Error while registering with new user: %@ %@", [error localizedDescription], [error localizedFailureReason]);
+                    DLog(@"Error while registering with new user: %@ %@", [error localizedDescription], [error localizedFailureReason]);
                 }
             }];
         }
         else
         {
-            NSLog(@"[Login View Controller] Welcome back %@", user[@"name"]);
+            DLog(@"[Login View Controller] Welcome back %@", user[@"name"]);
             [self setupInstallationToParse];
             [self dismissViewControllerAnimated:YES completion:nil];
         }
@@ -102,7 +102,7 @@
         }
         else
         {
-            NSLog(@"Error while saving installations: err %@, %@", [error localizedDescription], [error localizedFailureReason]);
+            DLog(@"Error while saving installations: err %@, %@", [error localizedDescription], [error localizedFailureReason]);
         }
         
     }];

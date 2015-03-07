@@ -120,7 +120,7 @@
             
             [searchAllContacts findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 if (!error) {
-                    //NSLog(@"%@", [objects[0] description]);
+                    //DLog(@"%@", [objects[0] description]);
                     _contacts = [NSMutableArray arrayWithArray:objects];
                     [self loadImagesOfContacts];
                     
@@ -129,13 +129,13 @@
                 }
                 else
                 {
-                    NSLog(@"Error while querying the database for matching friends. Description: %@, Failure: %@", [error localizedDescription], [error localizedFailureReason]);
+                    DLog(@"Error while querying the database for matching friends. Description: %@, Failure: %@", [error localizedDescription], [error localizedFailureReason]);
                 }
             }];
         }
         else
         {
-            NSLog(@"You have no friends. %@ %@", [error localizedDescription], [error localizedFailureReason]);
+            DLog(@"You have no friends. %@ %@", [error localizedDescription], [error localizedFailureReason]);
         }
 
     }];
@@ -239,7 +239,7 @@
              }
              else
              {
-                 NSLog(@"userSettings: %@, %@", [error localizedDescription], [error localizedFailureReason]);
+                 DLog(@"userSettings: %@, %@", [error localizedDescription], [error localizedFailureReason]);
              }
          }];
         
@@ -251,7 +251,7 @@
 {
     
     if (indexPath.row == _contacts.count) {
-        NSLog(@"Share visual");
+        DLog(@"Share visual");
         NSString *shareString = [NSString stringWithFormat:@"Let's fart together!"];
         NSArray *shareContent = @[shareString];
         
@@ -292,7 +292,7 @@
 {
     if (indexPath.row == _contacts.count)
     {
-        NSLog(@"Can't do anything here");
+        DLog(@"Can't do anything here");
     } else {
         
     }
@@ -307,11 +307,11 @@
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:p];
     
     if (indexPath == nil) {
-        NSLog(@"Pressed outside the rows");
+        DLog(@"Pressed outside the rows");
     } else if(longPressGesture.state == UIGestureRecognizerStateBegan) {
-        NSLog(@"Indexpath pressed = %@", [indexPath description]);
+        DLog(@"Indexpath pressed = %@", [indexPath description]);
     } else {
-        NSLog(@"Gesture recognizer state: %ld", longPressGesture.state);
+        DLog(@"Gesture recognizer state: %ld", longPressGesture.state);
     }
 }
 
