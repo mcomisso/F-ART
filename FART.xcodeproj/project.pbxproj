@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49E4FC611A23B89900908EDA /* parseData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E4FC601A23B89900908EDA /* parseData.plist */; };
 		966A8312A11A565211AC3F14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE167145EC4CDA49F2E14EE /* libPods.a */; };
 		B907E0321A140E10009713F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B907E0301A140E10009713F5 /* Fabric.framework */; };
 		B917D286196E0CDD008E418D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D285196E0CDD008E418D /* Foundation.framework */; };
@@ -37,6 +36,7 @@
 		B958E4741A2FC35B00C4DA4E /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B958E4721A2FC35B00C4DA4E /* MoPub.bundle */; };
 		B96ADA8D1A1D579A00E4E424 /* PushNotificationMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8C1A1D579A00E4E424 /* PushNotificationMaster.m */; };
 		B96ADA901A1D74DF00E4E424 /* shareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */; };
+		B98FA7E01AADAD5D005B1062 /* UAObfuscatedString.m in Sources */ = {isa = PBXBuildFile; fileRef = B98FA7DF1AADAD5D005B1062 /* UAObfuscatedString.m */; };
 		B990A19E197DBB1600B276E9 /* feedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B990A19D197DBB1600B276E9 /* feedbackViewController.m */; };
 		B99BFB361A7EE33500538FEA /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B99BFB351A7EE33500538FEA /* MainTabBarController.m */; };
 		B99BFB391A7EE89C00538FEA /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99BFB381A7EE89C00538FEA /* Launch Screen.xib */; };
@@ -62,7 +62,6 @@
 /* Begin PBXFileReference section */
 		0AE167145EC4CDA49F2E14EE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4FC5B1A23B63200908EDA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		49E4FC601A23B89900908EDA /* parseData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parseData.plist; sourceTree = "<group>"; };
 		6200339B294EBFAD797B17C3 /* Pods-FART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FART/Pods-FART.debug.xcconfig"; sourceTree = "<group>"; };
 		B907E02F1A140E10009713F5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		B907E0301A140E10009713F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
@@ -110,6 +109,8 @@
 		B96ADA8E1A1D74DF00E4E424 /* shareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shareTableViewCell.h; sourceTree = "<group>"; };
 		B96ADA8F1A1D74DF00E4E424 /* shareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shareTableViewCell.m; sourceTree = "<group>"; };
 		B96ADA921A1E0E5100E4E424 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		B98FA7DE1AADAD5D005B1062 /* UAObfuscatedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAObfuscatedString.h; sourceTree = "<group>"; };
+		B98FA7DF1AADAD5D005B1062 /* UAObfuscatedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAObfuscatedString.m; sourceTree = "<group>"; };
 		B990A19C197DBB1600B276E9 /* feedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackViewController.h; sourceTree = "<group>"; };
 		B990A19D197DBB1600B276E9 /* feedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackViewController.m; sourceTree = "<group>"; };
 		B99BFB341A7EE33500538FEA /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
@@ -229,7 +230,7 @@
 			children = (
 				B99BFB381A7EE89C00538FEA /* Launch Screen.xib */,
 				B917D297196E0CDD008E418D /* Main.storyboard */,
-				B96ADA921A1E0E5100E4E424 /* Constants.h */,
+				B98FA7DD1AADAD54005B1062 /* Utils */,
 				B917D294196E0CDD008E418D /* AppDelegate.h */,
 				B917D295196E0CDD008E418D /* AppDelegate.m */,
 				B99BFB3A1A7EE96400538FEA /* Utils */,
@@ -243,7 +244,6 @@
 				B917D29B196E0CDD008E418D /* ViewController.m */,
 				B917D29D196E0CDD008E418D /* Images.xcassets */,
 				B917D28C196E0CDD008E418D /* Supporting Files */,
-				49E4FC601A23B89900908EDA /* parseData.plist */,
 			);
 			path = "H-ound";
 			sourceTree = "<group>";
@@ -301,6 +301,16 @@
 				B917D2E0196EE1D6008E418D /* userSettingsViewController.m */,
 			);
 			name = "User Profile";
+			sourceTree = "<group>";
+		};
+		B98FA7DD1AADAD54005B1062 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B98FA7DE1AADAD5D005B1062 /* UAObfuscatedString.h */,
+				B98FA7DF1AADAD5D005B1062 /* UAObfuscatedString.m */,
+				B96ADA921A1E0E5100E4E424 /* Constants.h */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		B990A19F197DBB1A00B276E9 /* Feedback */ = {
@@ -404,7 +414,6 @@
 			files = (
 				B917D29E196E0CDD008E418D /* Images.xcassets in Resources */,
 				B917D290196E0CDD008E418D /* InfoPlist.strings in Resources */,
-				49E4FC611A23B89900908EDA /* parseData.plist in Resources */,
 				B958E4741A2FC35B00C4DA4E /* MoPub.bundle in Resources */,
 				B9DCAB031A099C13000940C7 /* fart.caf in Resources */,
 				B99BFB391A7EE89C00538FEA /* Launch Screen.xib in Resources */,
@@ -472,6 +481,7 @@
 				B954ADCD1978946700AB9877 /* contactsViewController.m in Sources */,
 				B917D296196E0CDD008E418D /* AppDelegate.m in Sources */,
 				B990A19E197DBB1600B276E9 /* feedbackViewController.m in Sources */,
+				B98FA7E01AADAD5D005B1062 /* UAObfuscatedString.m in Sources */,
 				B99BFB361A7EE33500538FEA /* MainTabBarController.m in Sources */,
 				B96ADA8D1A1D579A00E4E424 /* PushNotificationMaster.m in Sources */,
 				B96ADA901A1D74DF00E4E424 /* shareTableViewCell.m in Sources */,

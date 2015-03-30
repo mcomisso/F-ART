@@ -11,6 +11,8 @@
 #import <Crashlytics/Crashlytics.h>
 #import <MoPub/MoPub.h>
 
+#import "UAObfuscatedString.h"
+
 #import <CWStatusBarNotification/CWStatusBarNotification.h>
 
 #import "PushNotificationMaster.h"
@@ -31,13 +33,14 @@
 
     [Fabric with:@[CrashlyticsKit, MoPubKit]];
 
-    NSString *path = [[NSBundle mainBundle] pathForResource:
-                      @"parseData" ofType:@"plist"];
-    NSMutableDictionary *parseData = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
-
+    /*
+     applicationId: PM1r1PUPWT8Ea5RfUFjuhoV1fcvlEiyJeT39DyKV
+     clientKey:     my7EHEbViYEbzUIUJH07SiRGcxwALaY0PBiY2lST
+     */
+    
     //Parse Initialization
-    [Parse setApplicationId:[parseData objectForKey:@"applicationId"]
-                  clientKey:[parseData objectForKey:@"clientKey"]];
+    [Parse setApplicationId:Obfuscate.P.M._1.r._1.P.U.P.W.T._8.E.a._5.R.f.U.F.j.u.h.o.V._1.f.c.v.l.E.i.y.J.e.T._3._9.D.y.K.V
+                  clientKey:Obfuscate.m.y._7.E.H.E.b.V.i.Y.E.b.z.U.I.U.J.H._0._7.S.i.R.G.c.x.w.A.L.a.Y._0.P.B.i.Y._2.l.S.T];
     
     [PFAnalytics trackAppOpenedWithLaunchOptionsInBackground:launchOptions block:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
