@@ -39,15 +39,12 @@
      */
     
     //Parse Initialization
+    [Parse enableDataSharingWithApplicationGroupIdentifier:@"group.com.matcom.fart"];
     [Parse setApplicationId:Obfuscate.P.M._1.r._1.P.U.P.W.T._8.E.a._5.R.f.U.F.j.u.h.o.V._1.f.c.v.l.E.i.y.J.e.T._3._9.D.y.K.V
                   clientKey:Obfuscate.m.y._7.E.H.E.b.V.i.Y.E.b.z.U.I.U.J.H._0._7.S.i.R.G.c.x.w.A.L.a.Y._0.P.B.i.Y._2.l.S.T];
     
     [PFAnalytics trackAppOpenedWithLaunchOptionsInBackground:launchOptions block:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            
-        }
-        else
-        {
+        if (!succeeded) {
             DLog(@"%@ - %@", error.localizedDescription, error.localizedFailureReason);
         }
     }];
@@ -123,9 +120,7 @@
 
     
     NSError *error;
-    
     AVAudioSession *session = [AVAudioSession sharedInstance];
-    
     NSError *sessionAudioError = nil;
     
     [session setCategory:AVAudioSessionCategoryPlayback error:&sessionAudioError];

@@ -1,24 +1,31 @@
+# Uncomment this line to define a global platform for your project
 platform :ios, '7.0'
 
-pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+target 'FART' do
 
-pod 'SDWebImage', '~>3.6'
-pod 'UIImage+BlurredFrame'
-pod 'pop', '~> 1.0'
-pod 'NGAParallaxMotion', '~> 1.0'
-pod 'UIColor+FlatColors'
-pod 'CWStatusBarNotification', '~> 2.2.2'
+  pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 
-pod 'GraphKit'
+  pod 'SDWebImage', '~>3.6'
+  pod 'UIImage+BlurredFrame'
+  pod 'pop', '~> 1.0'
+  pod 'NGAParallaxMotion', '~> 1.0'
+  pod 'UIColor+FlatColors'
+  pod 'CWStatusBarNotification', '~> 2.2.2'
 
-#Colors
-pod 'ChameleonFramework'
+  pod 'GraphKit'
 
-#Notifications
-pod 'MPGNotification', '~> 1.1'
+  #Colors
+  pod 'ChameleonFramework'
 
-#Parse Backend
-pod 'Parse'
-pod 'ParseUI'
-#pod 'ParseCrashReporting', '~> 1.6'
-pod 'ParseFacebookUtils'
+  #Notifications
+  pod 'MPGNotification', '~> 1.1'
+
+  #Parse Backend
+  pod 'Parse'
+  pod 'ParseUI'
+  #pod 'ParseCrashReporting', '~> 1.6'
+  pod 'ParseFacebookUtils'
+
+  pod 'SVProgressHUD'
+
+end

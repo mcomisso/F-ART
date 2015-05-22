@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="abV-5Q-xXL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="abV-5Q-xXL">
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,12 +19,6 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FART!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjj-Om-SsJ">
-                                <rect key="frame" x="277" y="289" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv5-Ao-Qdd">
                                 <rect key="frame" x="205" y="528" width="190" height="52"/>
                                 <color key="backgroundColor" red="0.22352941176470589" green="0.30588235294117649" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,13 +34,20 @@
                                     <action selector="facebookLoginButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ea7-e1-zgh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fart_white" translatesAutoresizingMaskIntoConstraints="NO" id="KCL-WN-GEu">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Nf2-Zt-qB3"/>
+                                    <constraint firstAttribute="width" constant="300" id="iTe-81-1h8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.094117647058823528" green="0.47450980392156861" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="KCL-WN-GEu" secondAttribute="centerY" id="6i1-QQ-a6o"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Wv5-Ao-Qdd" secondAttribute="bottom" constant="20" id="BXe-Cr-S30"/>
-                            <constraint firstAttribute="centerY" secondItem="Pjj-Om-SsJ" secondAttribute="centerY" constant="0.5" id="HO9-2O-m5p"/>
                             <constraint firstAttribute="centerX" secondItem="Wv5-Ao-Qdd" secondAttribute="centerX" id="RFh-CR-qtt"/>
-                            <constraint firstAttribute="centerX" secondItem="Pjj-Om-SsJ" secondAttribute="centerX" id="qHu-Zw-UsT"/>
+                            <constraint firstAttribute="centerX" secondItem="KCL-WN-GEu" secondAttribute="centerX" id="Re7-k8-Gw8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1DU-Ns-bfv"/>
@@ -75,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="-257" y="-333"/>
         </scene>
-        <!--Contacts View Controller-->
+        <!--FRIENDS-->
         <scene sceneID="h1Z-fy-qlN">
             <objects>
                 <viewController id="1Cb-WY-ric" customClass="contactsViewController" sceneMemberID="viewController">
@@ -104,8 +105,9 @@
                                                     <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="55"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="H49-Y8-Ied">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" image="fart_white" translatesAutoresizingMaskIntoConstraints="NO" id="H49-Y8-Ied">
                                                     <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                                    <color key="backgroundColor" red="0.25098039220000001" green="0.73333333329999995" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="64" id="73d-9s-iMn"/>
                                                         <constraint firstAttribute="width" constant="64" id="kdh-9C-wdf"/>
@@ -135,11 +137,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbM-Sl-s8Z" userLabel="share Message">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hbM-Sl-s8Z" userLabel="share Message">
                                                     <rect key="frame" x="8" y="10" width="584" height="64"/>
-                                                    <string key="text">You have no friends here! 
-Share and fart'em all!</string>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <string key="text">You have no friends here!
+Tap to share and fart'em all!</string>
+                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="40"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -170,7 +172,7 @@ Share and fart'em all!</string>
                             <constraint firstAttribute="trailing" secondItem="v3N-hK-uht" secondAttribute="trailing" id="hHn-xS-Cro"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VoR-9N-mlA"/>
+                    <navigationItem key="navigationItem" title="FRIENDS" id="VoR-9N-mlA"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="tableView" destination="v3N-hK-uht" id="ukD-wk-e5J"/>
@@ -193,15 +195,9 @@ Share and fart'em all!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-s5-Cvn" userLabel="avatarLittle">
-                                <rect key="frame" x="16" y="72" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jEA-s5-Cvn" secondAttribute="height" multiplier="1:1" id="TaE-Wt-1B7"/>
-                                    <constraint firstAttribute="height" constant="100" id="rCL-s7-fU9"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-d6-BT8">
-                                <rect key="frame" x="274" y="513" width="53" height="30"/>
+                                <rect key="frame" x="266" y="501" width="70" height="42"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                 <state key="normal" title="Logout!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,45 +206,43 @@ Share and fart'em all!</string>
                                     <action selector="logout:" destination="ZuJ-EN-LMg" eventType="touchUpInside" id="9ox-fR-XTO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Nome" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaE-8M-iK1">
-                                <rect key="frame" x="124" y="72" width="460" height="54"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oaE-8M-iK1">
+                                <rect key="frame" x="16" y="268" width="568" height="54"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="54"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDL-M2-sUF" customClass="GKLineGraph">
-                                <rect key="frame" x="140" y="180" width="320" height="325"/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.54901960780000003" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="6tf-7k-1Ce"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cognome" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-Yi-NET">
-                                <rect key="frame" x="124" y="134" width="460" height="38"/>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="38"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cognome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-Yi-NET">
+                                <rect key="frame" x="16" y="330" width="568" height="45"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="45"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-s5-Cvn" userLabel="avatarLittle">
+                                <rect key="frame" x="250" y="72" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jEA-s5-Cvn" secondAttribute="height" multiplier="1:1" id="TaE-Wt-1B7"/>
+                                    <constraint firstAttribute="height" constant="100" id="rCL-s7-fU9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.54901960780000003" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="3Sn-Yi-NET" firstAttribute="leading" secondItem="jEA-s5-Cvn" secondAttribute="trailing" constant="8" id="0Gw-an-UP9"/>
-                            <constraint firstItem="jEA-s5-Cvn" firstAttribute="leading" secondItem="bCi-Kb-fGL" secondAttribute="leading" constant="16" id="3ZF-oF-41u"/>
-                            <constraint firstAttribute="trailing" secondItem="oaE-8M-iK1" secondAttribute="trailing" constant="16" id="Cxt-eb-ONb"/>
-                            <constraint firstAttribute="centerX" secondItem="zDL-M2-sUF" secondAttribute="centerX" id="DXg-5C-E4E"/>
-                            <constraint firstItem="zDL-M2-sUF" firstAttribute="top" secondItem="jEA-s5-Cvn" secondAttribute="bottom" constant="8" id="Ei4-zu-Pbx"/>
+                            <constraint firstItem="3Sn-Yi-NET" firstAttribute="leading" secondItem="bCi-Kb-fGL" secondAttribute="leadingMargin" id="7l8-f7-rUa"/>
+                            <constraint firstAttribute="centerY" secondItem="oaE-8M-iK1" secondAttribute="centerY" constant="5" id="CUV-qf-G4d"/>
+                            <constraint firstAttribute="centerX" secondItem="jEA-s5-Cvn" secondAttribute="centerX" id="G7c-kb-7U9"/>
                             <constraint firstItem="jEA-s5-Cvn" firstAttribute="top" secondItem="98K-zZ-phI" secondAttribute="bottom" constant="8" id="HCF-zD-cAU"/>
-                            <constraint firstAttribute="trailing" secondItem="3Sn-Yi-NET" secondAttribute="trailing" constant="16" id="Szt-33-nwd"/>
+                            <constraint firstItem="oaE-8M-iK1" firstAttribute="trailing" secondItem="bCi-Kb-fGL" secondAttribute="trailingMargin" id="Ji8-3e-cwQ"/>
+                            <constraint firstAttribute="centerX" secondItem="oaE-8M-iK1" secondAttribute="centerX" id="aYu-YP-Y3K"/>
+                            <constraint firstItem="3Sn-Yi-NET" firstAttribute="trailing" secondItem="bCi-Kb-fGL" secondAttribute="trailingMargin" id="dUc-CD-DmW"/>
                             <constraint firstItem="rn6-mi-OXV" firstAttribute="top" secondItem="f9T-d6-BT8" secondAttribute="bottom" constant="8" id="gBp-dG-n8P"/>
-                            <constraint firstItem="oaE-8M-iK1" firstAttribute="leading" secondItem="jEA-s5-Cvn" secondAttribute="trailing" constant="8" id="hNb-Eu-1r7"/>
-                            <constraint firstItem="f9T-d6-BT8" firstAttribute="top" secondItem="zDL-M2-sUF" secondAttribute="bottom" constant="8" id="iM1-Nt-lno"/>
                             <constraint firstAttribute="centerX" secondItem="f9T-d6-BT8" secondAttribute="centerX" constant="-0.5" id="nCf-5G-7R0"/>
-                            <constraint firstItem="oaE-8M-iK1" firstAttribute="top" secondItem="98K-zZ-phI" secondAttribute="bottom" constant="8" id="wqS-vK-gQv"/>
+                            <constraint firstItem="oaE-8M-iK1" firstAttribute="leading" secondItem="bCi-Kb-fGL" secondAttribute="leadingMargin" id="r4W-Bq-syf"/>
+                            <constraint firstAttribute="centerX" secondItem="3Sn-Yi-NET" secondAttribute="centerX" id="rgm-WO-NoS"/>
                             <constraint firstItem="3Sn-Yi-NET" firstAttribute="top" secondItem="oaE-8M-iK1" secondAttribute="bottom" constant="8" id="zNK-v2-NHQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="JTK-sf-kTy"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="barGraph" destination="zDL-M2-sUF" id="aub-Jt-2FV"/>
                         <outlet property="profileName" destination="oaE-8M-iK1" id="ubw-ls-fgI"/>
                         <outlet property="profilePicture" destination="jEA-s5-Cvn" id="bhd-s4-IsY"/>
                         <outlet property="profileSurname" destination="3Sn-Yi-NET" id="ygR-e8-iqC"/>
@@ -256,7 +250,7 @@ Share and fart'em all!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9Y-lN-Xc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="47"/>
+            <point key="canvasLocation" x="1446" y="63"/>
         </scene>
         <!--FART!-->
         <scene sceneID="oVR-co-yIn">
@@ -280,6 +274,6 @@ Share and fart'em all!</string>
     </scenes>
     <resources>
         <image name="explosionIcon" width="22" height="22"/>
-        <image name="placeholder" width="275" height="275"/>
+        <image name="fart_white" width="1024" height="1024"/>
     </resources>
 </document>

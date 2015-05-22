@@ -15,6 +15,7 @@
 
 #import "PushNotificationMaster.h"
 
+#import <MoPub/MoPub.h>
 
 @interface contactsViewController () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
@@ -35,7 +36,7 @@
     [super viewDidLoad];
     
     // TODO: Replace this test id with your personal ad unit id
-    MPAdView* adView = [[MPAdView alloc] initWithAdUnitId:@"0fd404de447942edb7610228cb412614"
+    MPAdView* adView = [[MPAdView alloc] initWithAdUnitId:@"fcd9de99965d46aba805441ef87cedae"
                                                      size:MOPUB_BANNER_SIZE];
     self.adView = adView;
     self.adView.delegate = self;
@@ -195,7 +196,7 @@
             cell = [[shareTableViewCell alloc]initWithFrame:CGRectZero];
         }
         if (_contacts.count == 0) {
-            cell.labelText.text = @"You have no friends here. Tap to share and fart'em all!";
+            cell.labelText.text = @"You have no friends here! Tap to share and fart'em all!";
         }
         else
         {
@@ -234,7 +235,7 @@
                  cell.contactImage.clipsToBounds = YES;
                  
                  [cell.contactImage sd_setImageWithURL:profilePictureURL
-                                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+                                      placeholderImage:[UIImage imageNamed:@"fart_white"]];
                  
              }
              else

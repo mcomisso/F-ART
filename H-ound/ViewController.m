@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface ViewController ()
 
@@ -39,6 +39,8 @@
 
 - (IBAction)facebookLoginButton {
     NSArray *permissionsArray = @[ @"user_about_me", @"user_location", @"user_friends"];
+    
+    [SVProgressHUD show];
     
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
         //DLog(@"%@", [user description]);
@@ -84,6 +86,8 @@
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];
+    
+    [SVProgressHUD dismiss];
     
 }
 

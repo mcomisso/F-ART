@@ -13,13 +13,11 @@
 #import "ViewController.h"
 
 #import <NGAParallaxMotion/NGAParallaxMotion.h>
-#import <GKLineGraph.h>
-@interface userSettingsViewController () <GKLineGraphDataSource>
+@interface userSettingsViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (strong, nonatomic) IBOutlet UILabel *profileName;
 @property (strong, nonatomic) IBOutlet UILabel *profileSurname;
-@property (weak, nonatomic) IBOutlet GKLineGraph *barGraph;
 
 @end
 
@@ -37,12 +35,12 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self test];
     
     // NavigationBar
     self.navigationController.navigationBar.barTintColor = FlatSkyBlueDark;
@@ -82,44 +80,26 @@
     
     // Background setup
     self.view.backgroundColor = FlatSkyBlue;
-    self.barGraph.backgroundColor = FlatSkyBlue;
-    [self buildGraph];
-}
-
--(void)test
-{
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDate *now = [NSDate date];
-    NSDate *startOfTheWeek;
-    NSDate *endOfWeek;
-    NSTimeInterval interval;
-    [cal rangeOfUnit:NSCalendarUnitWeekday
-           startDate:&startOfTheWeek
-            interval:&interval
-             forDate:now];
-    
-    endOfWeek = [startOfTheWeek dateByAddingTimeInterval:interval-1];
-    
-    DLog(@"Description %@", [cal description] );
-    
-    
-}
-
--(void)buildGraph {
-    self.barGraph.dataSource = self;
-//    [self.barGraph draw];
 }
 
 - (IBAction)logout:(id)sender {
-    [PFUser logOut];
     
-    UIStoryboard *storyboard = [self storyboard];
-    ViewController *loginViewController =
-    [storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Logout" message:@"Are you sure?" preferredStyle:UIAlertControllerStyleAlert];
     
-    [self presentViewController:loginViewController
-                       animated:YES
-                     completion:nil];
+    UIAlertAction *iamsure = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        [PFUser logOut];
+        
+        [self.tabBarController setSelectedIndex:0];
+//        [self.navigationController popToRootViewControllerAnimated:YES];
+
+    }];
+    
+    UIAlertAction *abort = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertController addAction:abort];
+    [alertController addAction:iamsure];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -128,47 +108,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - BarGraphView
-
--(NSInteger)numberOfLines
-{
-    return 2;
-}
-
--(UIColor *)colorForLineAtIndex:(NSInteger)index
-{
-    if ((index % 2) == 0) {
-        return FlatWatermelonDark;
-    }
-    else {
-        return FlatYellowDark;
-    }
-}
-
--(NSArray *)valuesForLineAtIndex:(NSInteger)index
-{
-    
-    NSArray *data = @[
-  @[@20, @40, @20, @60, @40, @140, @80],
-  @[@40, @20, @60, @100, @60, @20, @60],
-  @[@80, @60, @40, @160, @100, @40, @110],
-  @[@120, @150, @80, @120, @140, @100, @0],
-  ];
-    NSArray *labels = @[@"2001", @"2002", @"2003", @"2004", @"2005", @"2006", @"2007"];
-
-    return data;
-}
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

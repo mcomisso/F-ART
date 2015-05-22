@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>67272AE7-C499-447F-AB42-3BDE618B6E3F</string>
+	<string>CBAC0ADF-9DE4-458D-8061-5094EE1114F6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>FART</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>48FC11642A2F08F733624377A58B274F758E1C4C</key>
-		<string>https://github.com/mcomisso/H-oundFartEd.git</string>
+		<string>https://github.com/mcomisso/F-ART.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>FART.xcworkspace</string>
@@ -21,7 +21,7 @@
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mcomisso/H-oundFartEd.git</string>
+	<string>https://github.com/mcomisso/F-ART.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>48FC11642A2F08F733624377A58B274F758E1C4C</string>
 			<key>IDESourceControlWCCName</key>
-			<string>FART</string>
+			<string>F-art</string>
 		</dict>
 	</array>
 </dict>
