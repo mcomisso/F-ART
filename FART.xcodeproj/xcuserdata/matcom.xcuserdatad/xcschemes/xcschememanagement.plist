@@ -14,11 +14,6 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>fartCounter.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>18</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>

@@ -31,10 +31,6 @@
 		B917D2D5196E0F5A008E418D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D2D4196E0F5A008E418D /* Social.framework */; };
 		B917D2DC196E7D43008E418D /* contactCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B917D2DB196E7D43008E418D /* contactCellTableViewCell.m */; };
 		B917D2E1196EE1D6008E418D /* userSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B917D2E0196EE1D6008E418D /* userSettingsViewController.m */; };
-		B94D91101B0FC38A00556D16 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9EB231A5F0428006DE682 /* NotificationCenter.framework */; };
-		B94D91151B0FC38A00556D16 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D91141B0FC38A00556D16 /* TodayViewController.swift */; };
-		B94D91171B0FC38A00556D16 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D91161B0FC38A00556D16 /* MainInterface.storyboard */; };
-		B94D911A1B0FC38A00556D16 /* fartCounter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B94D910F1B0FC38A00556D16 /* fartCounter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B954ADCD1978946700AB9877 /* contactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B954ADCC1978946700AB9877 /* contactsViewController.m */; };
 		B958E4731A2FC35B00C4DA4E /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958E4711A2FC35B00C4DA4E /* MoPub.framework */; };
 		B958E4741A2FC35B00C4DA4E /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B958E4721A2FC35B00C4DA4E /* MoPub.bundle */; };
@@ -50,16 +46,6 @@
 		B9E295B21A3A579900EE2CA5 /* fart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E295B11A3A579900EE2CA5 /* fart.mp3 */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B94D91181B0FC38A00556D16 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B917D27A196E0CDD008E418D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B94D910E1B0FC38A00556D16;
-			remoteInfo = fartCounter;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		B967B3B31A1BDCCB005BEBF8 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -67,7 +53,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B94D911A1B0FC38A00556D16 /* fartCounter.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,10 +99,6 @@
 		B917D2DB196E7D43008E418D /* contactCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactCellTableViewCell.m; sourceTree = "<group>"; };
 		B917D2DF196EE1D6008E418D /* userSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userSettingsViewController.h; path = ../userSettingsViewController.h; sourceTree = "<group>"; };
 		B917D2E0196EE1D6008E418D /* userSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingsViewController.m; path = ../userSettingsViewController.m; sourceTree = "<group>"; };
-		B94D910F1B0FC38A00556D16 /* fartCounter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = fartCounter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		B94D91131B0FC38A00556D16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B94D91141B0FC38A00556D16 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		B94D91161B0FC38A00556D16 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		B954ADCB1978946700AB9877 /* contactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactsViewController.h; sourceTree = "<group>"; };
 		B954ADCC1978946700AB9877 /* contactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactsViewController.m; sourceTree = "<group>"; };
 		B958E4711A2FC35B00C4DA4E /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
@@ -174,14 +155,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B94D910C1B0FC38A00556D16 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B94D91101B0FC38A00556D16 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -200,7 +173,6 @@
 				B9F9EB1D1A5EFD4A006DE682 /* FART.entitlements */,
 				B917D28B196E0CDD008E418D /* FART */,
 				B917D2AA196E0CDD008E418D /* FARTTests */,
-				B94D91111B0FC38A00556D16 /* fartCounter */,
 				B917D284196E0CDD008E418D /* Frameworks */,
 				B917D283196E0CDD008E418D /* Products */,
 				B71B205C9D9E83B86E4875D8 /* Pods */,
@@ -211,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				B917D282196E0CDD008E418D /* FART.app */,
-				B94D910F1B0FC38A00556D16 /* fartCounter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,24 +299,6 @@
 			name = "User Profile";
 			sourceTree = "<group>";
 		};
-		B94D91111B0FC38A00556D16 /* fartCounter */ = {
-			isa = PBXGroup;
-			children = (
-				B94D91141B0FC38A00556D16 /* TodayViewController.swift */,
-				B94D91161B0FC38A00556D16 /* MainInterface.storyboard */,
-				B94D91121B0FC38A00556D16 /* Supporting Files */,
-			);
-			path = fartCounter;
-			sourceTree = "<group>";
-		};
-		B94D91121B0FC38A00556D16 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B94D91131B0FC38A00556D16 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		B98FA7DD1AADAD54005B1062 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,29 +345,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				B94D91191B0FC38A00556D16 /* PBXTargetDependency */,
 			);
 			name = FART;
 			productName = "H-ound";
 			productReference = B917D282196E0CDD008E418D /* FART.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B94D910E1B0FC38A00556D16 /* fartCounter */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B94D911B1B0FC38A00556D16 /* Build configuration list for PBXNativeTarget "fartCounter" */;
-			buildPhases = (
-				B94D910B1B0FC38A00556D16 /* Sources */,
-				B94D910C1B0FC38A00556D16 /* Frameworks */,
-				B94D910D1B0FC38A00556D16 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = fartCounter;
-			productName = fartCounter;
-			productReference = B94D910F1B0FC38A00556D16 /* fartCounter.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -442,10 +377,6 @@
 							};
 						};
 					};
-					B94D910E1B0FC38A00556D16 = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = B82WJF6RBY;
-					};
 				};
 			};
 			buildConfigurationList = B917D27D196E0CDD008E418D /* Build configuration list for PBXProject "FART" */;
@@ -462,7 +393,6 @@
 			projectRoot = "";
 			targets = (
 				B917D281196E0CDD008E418D /* FART */,
-				B94D910E1B0FC38A00556D16 /* fartCounter */,
 			);
 		};
 /* End PBXProject section */
@@ -479,14 +409,6 @@
 				B99BFB391A7EE89C00538FEA /* Launch Screen.xib in Resources */,
 				B9E295B21A3A579900EE2CA5 /* fart.mp3 in Resources */,
 				B917D299196E0CDD008E418D /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B94D910D1B0FC38A00556D16 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B94D91171B0FC38A00556D16 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,23 +478,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B94D910B1B0FC38A00556D16 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B94D91151B0FC38A00556D16 /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B94D91191B0FC38A00556D16 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B94D910E1B0FC38A00556D16 /* fartCounter */;
-			targetProxy = B94D91181B0FC38A00556D16 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B917D28E196E0CDD008E418D /* InfoPlist.strings */ = {
@@ -738,49 +644,6 @@
 			};
 			name = Release;
 		};
-		B94D911C1B0FC38A00556D16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = fartCounter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		B94D911D1B0FC38A00556D16 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = fartCounter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -798,15 +661,6 @@
 			buildConfigurations = (
 				B917D2B5196E0CDD008E418D /* Debug */,
 				B917D2B6196E0CDD008E418D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B94D911B1B0FC38A00556D16 /* Build configuration list for PBXNativeTarget "fartCounter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B94D911C1B0FC38A00556D16 /* Debug */,
-				B94D911D1B0FC38A00556D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
