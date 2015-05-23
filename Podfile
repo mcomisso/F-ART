@@ -12,8 +12,6 @@ target 'FART' do
   pod 'UIColor+FlatColors'
   pod 'CWStatusBarNotification', '~> 2.2.2'
 
-  pod 'GraphKit'
-
   #Colors
   pod 'ChameleonFramework'
 
